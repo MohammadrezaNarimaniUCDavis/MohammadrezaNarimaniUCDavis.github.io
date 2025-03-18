@@ -60,7 +60,7 @@ This template is intentionally kept very minimalistic. Of course, you should fee
 Ultimately, if you want are more complex website (e.g., with sub-pages, or a blog, or ...), but still keep the GitHub pages-based approach, you might want to look into static website generators such as [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io).
 
 
-## Credits
+## ⭐ Credits
 
 - Favicon: Icon made by [Awicon](https://www.flaticon.com/authors/awicon) from [www.flaticon.com](https://www.flaticon.com/)
 

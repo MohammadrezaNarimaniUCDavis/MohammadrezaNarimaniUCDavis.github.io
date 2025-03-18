@@ -1,35 +1,76 @@
-html {
+/* Base font settings */
+html, body {
+    margin: 0;           /* Remove default browser margins */
+    padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: larger;
     font-weight: 300;
+    color: #000;         /* Use black (or your preferred text color) site-wide */
 }
 
+/* General link styling */
 a {
     text-decoration: none;
-    color: #1565c0;
+    color: #000; /* Same blue color as before */
 }
 
 a:hover {
     color: #217ee7;
 }
 
-#content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) ;
-    text-align: center;
-    max-width: 520px;
-    padding: 32px;
-    line-height: 1.6em;
+/* Header & Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+    text-align: center;  /* Center the navigation horizontally */
 }
 
+.nav-links {
+    list-style: none;
+    display: inline-flex; /* Horizontal list */
+    gap: 2rem;            /* Spacing between items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    /* Each list item is inline in the flex layout above */
+}
+
+.nav-links li a {
+    font-size: 1rem;      /* Adjust as you like */
+    font-weight: 600;     /* Slightly bolder for nav links */
+}
+
+/* Main content section */
+#content {
+    max-width: 600px;     /* Adjust the width to your preference */
+    margin: 6rem auto 2rem auto; 
+    /* 
+      6rem top margin so it sits below the fixed header 
+      (increase if you want more space).
+      auto left & right to center,
+      2rem bottom margin for spacing at the bottom
+    */
+    text-align: center;
+    line-height: 1.6em;
+    padding: 0 1rem;      /* A little horizontal padding for mobile devices */
+}
+
+/* Avatar (profile image) */
 .avatar {
     border-radius: 50%;
     width: 150px;
+    margin-bottom: 1rem; /* Spacing below the image */
 }
 
+/* Icon list (for social/media links) */
 .icons {
     list-style-type: none;
     font-size: xx-large;
@@ -38,7 +79,7 @@ a:hover {
     justify-content: space-between;
     width: 80%;
     max-width: 320px;
-    margin: 1em auto;
+    margin: 2rem auto 0 auto;
 }
 
 .icons li {
