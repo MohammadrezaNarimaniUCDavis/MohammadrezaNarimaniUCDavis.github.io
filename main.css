@@ -39,22 +39,17 @@ header {
     padding: 0;
 }
 
-.nav-links li {
-    /* Each list item is inline in the flex layout above */
-}
-
 .nav-links li a {
     font-size: 1rem;      /* Adjust as you like */
     font-weight: 600;     /* Slightly bolder for nav links */
 }
 
-/* Main content section */
+/* Main content section for homepage */
 #content {
     max-width: 600px;     /* Adjust the width to your preference */
     margin: 6rem auto 2rem auto; 
     /* 
       6rem top margin so it sits below the fixed header 
-      (increase if you want more space).
       auto left & right to center,
       2rem bottom margin for spacing at the bottom
     */
@@ -63,7 +58,7 @@ header {
     padding: 0 1rem;      /* A little horizontal padding for mobile devices */
 }
 
-/* Avatar (profile image) */
+/* Avatar (profile image) on homepage */
 .avatar {
     border-radius: 50%;
     width: 150px;
@@ -95,7 +90,7 @@ header {
     color: #1565c0;
 }
 
-/* --- NEW BLOG STYLES --- */
+/* --- BLOG LISTING STYLES (blog.html) --- */
 #blog-list {
     display: flex;
     flex-direction: column;
@@ -128,4 +123,45 @@ header {
 .blog-card .read-more:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+/* --- SINGLE BLOG POST STYLES (blog_post_1.html) --- */
+/* A wider content area for individual blog pages, left-aligned text, etc. */
+#blog-content {
+    max-width: 900px;   /* Wider container for better reading on desktops */
+    margin: 6rem auto 2rem auto;
+    line-height: 1.6em;
+    padding: 0 1rem;    /* Padding for mobile edges */
+    text-align: left;   /* Left-align paragraphs, lists, etc. */
+}
+
+/* Center only headings within the blog content */
+#blog-content h1,
+#blog-content h2,
+#blog-content h3 {
+    text-align: center;
+}
+
+/* Center the "Back to Blog" link at the top */
+.back-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.back-link a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.back-link a:hover {
+    color: #217ee7;
+    text-decoration: underline;
+}
+
+/* Example reference list alignment (optional) */
+#blog-content ol {
+    margin-left: 1.5rem;
+    padding-left: 0; /* Adjust as you wish */
 }
