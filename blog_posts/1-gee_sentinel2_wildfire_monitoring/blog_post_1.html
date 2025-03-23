@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enhancing Wildfire Monitoring - Blog Post</title>
+    <link rel="stylesheet" href="../../main.css" />
+    <!-- Fonts & Icons (optional if you'd like consistent styling) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
+      integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Simple Nav to go back to main blog page -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../blog.html">← Back to Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="content">
+      <h1>Enhancing Wildfire Monitoring Through Remote Sensing With Sentinel-2 Imagery and Python Programming</h1>
+      <p><strong>Authors:</strong> Quynh Tran, Mohammadreza Narimani, Ali Moghimi, Alireza Pourreza</p>
+      <p>
+        This blog post highlights our poster presented at the ESEARCH program of UC Davis in the spring of 2024.
+        Our project demonstrates a workflow for detecting and monitoring wildfires using Sentinel-2 imagery,
+        leveraging Python programming for preprocessing, annotation, and eventual deep learning model development.
+      </p>
+
+      <h2>Poster Overview</h2>
+      <p>
+        Click on the poster image below to view the full PDF:
+      </p>
+      <a href="UCDavis_ESEARCH_Spring_2024_Poster.pdf" target="_blank">
+        <img
+          src="UCDavis_ESEARCH_Spring_2024_Poster.png"
+          alt="Enhancing Wildfire Monitoring Poster"
+          style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;"
+        />
+      </a>
+
+      <h2>Key Highlights</h2>
+      <ul style="text-align: left;">
+        <li><strong>Satellite Selection:</strong> Chose Sentinel-2 for its high spatial/temporal resolution and SWIR capabilities.</li>
+        <li><strong>Spectral Band Focus:</strong> Emphasized SWIR bands (B11, B12) for detecting active fire pixels.</li>
+        <li><strong>Data Preparation:</strong> Preprocessed and annotated 500 images for deep learning readiness.</li>
+        <li><strong>Cloud Coverage Assessment:</strong> Automated filtering for < 10% cloud cover, ensuring image clarity.</li>
+        <li><strong>U-Net Segmentation:</strong> Future work includes customizing a U-Net architecture to accurately segment fire pixels.</li>
+      </ul>
+
+      <h2>Sample Code Snippet</h2>
+      <p>
+        Below is a short snippet of the Google Earth Engine script (<code>Sentinel2_ROI_Download_B12_B11_B4.js</code>)
+        used to filter Sentinel-2 imagery by date, location, and cloud coverage, then export the clipped images:
+      </p>
+<pre style="text-align: left; background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
+<code>
+// Define the ImageCollection
+var S2 = ee.ImageCollection("COPERNICUS/S2_HARMONIZED");
+var ROI = ee.Geometry.Point(-122.673, 39.776);
+
+// Filter by date, bounds, and cloud coverage
+var image = S2
+  .filterDate("2020-08-16", "2020-08-29")
+  .filterBounds(ROI)
+  .sort("CLOUD_COVERAGE_ASSESSMENT")
+  .first();
+
+// Export the image with bands B12, B11, B4
+Export.image.toDrive({
+  image: image.select(['B12','B11','B4']),
+  description: 'Sentinel2_FalseColor',
+  scale: 10,
+  region: ROI.buffer(1000)
+});
+</code>
+</pre>
+
+      <p>
+        You can view the entire script in the same directory. This script helps create a false-color composite (SWIR2, SWIR1, Red) that enhances the visibility of active fire areas.
+      </p>
+
+      <h2>References</h2>
+      <ol style="text-align: left;">
+        <li>
+          OpenGeoEdu. (n.d.). <em>Sentinel-2 Teil 1</em>.
+          <a href="https://learn.opengeoedu.de/en/fernerkundung/vorlesung/copernicus/Sentinel-2-Teil-1" target="_blank">
+            https://learn.opengeoedu.de/en/fernerkundung/vorlesung/copernicus/Sentinel-2-Teil-1
+          </a>
+        </li>
+        <li>
+          UP42. (n.d.). <em>Enhancing Sentinel-2 Images to Superresolution</em>.
+          <a href="https://up42.com/blog/sentinel-2-superresolution" target="_blank">
+            https://up42.com/blog/sentinel-2-superresolution
+          </a>
+        </li>
+        <li>
+          de Almeida Pereira, G. H., Fusioka, A. M., Nassu, B. T., & Minetto, R. (2021).
+          <em>Active fire detection in Landsat-8 imagery: A large-scale dataset and a deep-learning study.</em>
+          ISPRS Journal of Photogrammetry and Remote Sensing, 178, 171-186.
+        </li>
+      </ol>
+
+      <p>
+        We hope this blog post provides insight into our approach for remote sensing of wildfires using Sentinel-2.
+        For questions or collaborations, feel free to reach out!
+      </p>
+    </section>
+  </body>
+</html>
