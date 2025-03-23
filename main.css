@@ -129,3 +129,27 @@ header {
     color: #0056b3;
     text-decoration: underline;
 }
+
+/* --- OPTIONAL: If you use a #blog-content container for single blog posts, 
+   you can define a wider layout for it. For example:
+#blog-content {
+    max-width: 900px;
+    margin: 6rem auto 2rem auto;
+    line-height: 1.6em;
+    padding: 0 1rem;
+    text-align: left;
+}
+*/
+
+/* Force long words or URLs to wrap within #content and #blog-content */
+#content p,
+#content li,
+#content a,
+#blog-content p,
+#blog-content li,
+#blog-content a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;    /* For older browser support */
+    word-break: break-word;   /* For older browser support */
+    hyphens: auto;            /* Optional: automatic hyphenation in supporting browsers */
+}
