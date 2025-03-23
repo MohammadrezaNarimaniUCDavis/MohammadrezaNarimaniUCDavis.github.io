@@ -11,7 +11,7 @@ html, body {
 /* General link styling */
 a {
     text-decoration: none;
-    color: #000; /* Same blue color as before */
+    color: #000; /* Same color as before */
 }
 
 a:hover {
@@ -93,4 +93,39 @@ header {
 
 .icons a:hover {
     color: #1565c0;
+}
+
+/* --- NEW BLOG STYLES --- */
+#blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.blog-card {
+    width: 80%;
+    max-width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+.blog-card h2 {
+    margin-top: 0;
+}
+
+.blog-card .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #217ee7;
+}
+
+.blog-card .read-more:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
