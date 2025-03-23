@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <title>Global Vegetation and Climate Insights Portal (GVCIP) - Blog Post</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../DataFiles/favicon.png" sizes="32x32" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../main.css" />
+
+    <!-- Fonts & Icons (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
+      integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Simple "Back to Blog" link -->
+    <header>
+      <div class="back-link">
+        <a href="../../blog.html">← Back to Blog</a>
+      </div>
+    </header>
+
+    <section id="blog-content">
+      <h1>Global Vegetation and Climate Insights Portal (GVCIP)</h1>
+      <p><strong>Authors:</strong> Mohammadreza Narimani, Nicholas Richmond</p>
+
+      <h2>Description</h2>
+      <p>
+        The Global Vegetation and Climate Insights Portal is an advanced web application developed using
+        Google Earth Engine (GEE). This tool facilitates dynamic visualization and analysis of global vegetation
+        and climate indicators such as Evapotranspiration, Leaf Area Index, and NDVI. It allows users to
+        explore environmental conditions across the globe through an interactive map interface.
+      </p>
+
+      <h3>Key Functionalities Include:</h3>
+      <ul>
+        <li><strong>Interactive Mapping:</strong> View and analyze global environmental data layers dynamically.</li>
+        <li><strong>Data Layer Selection:</strong> Users can select from a variety of data layers including NDVI, Evapotranspiration, and Land Surface Temperature.</li>
+        <li><strong>Time-Range Filtering:</strong> Adjust the time range to visualize data from specific periods.</li>
+        <li><strong>Automated Scaling:</strong> Data values are scaled appropriately for effective visualization.</li>
+        <li><strong>Region-Specific Analysis:</strong> Focus on a specific geographic area for detailed environmental insights.</li>
+        <li><strong>Legend and Visualization:</strong> A dynamic legend updates based on the selected data layer to represent value ranges with corresponding colors.</li>
+      </ul>
+
+      <p>
+        This portal leverages the comprehensive satellite data archives available within Google Earth Engine,
+        providing researchers, educators, and policymakers with crucial information for environmental monitoring,
+        agricultural planning, and climate research.
+      </p>
+
+      <h2>Explore the Code</h2>
+      <p>
+        To view the source code and contribute to the development, visit the repository on Google Earth Engine Code Editor:
+        <a href="https://code.earthengine.google.com/?accept_repo=users/mnarimani/ESEARCHSummer2025" target="_blank">
+          Global Vegetation and Climate Insights Portal Code
+        </a>
+      </p>
+
+      <h2>Explore the App</h2>
+      <p>
+        Experience the application live:
+        <a href="https://ee-mnarimani.projects.earthengine.app/view/global-vegetation-and-climate-insights-portal" target="_blank">
+          Global Vegetation and Climate Insights Portal App
+        </a>
+      </p>
+
+      <h2>Sample Code Snippet</h2>
+      <p>
+        Below is a short snippet from the <code>Global Vegetation and Climate Insights Portal.js</code> file demonstrating
+        how we define some global variables and set up the product layers in GEE:
+      </p>
+      <pre style="background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
+<code>
+// Key functionalities: NDVI, ET, LAI, etc.
+var products = {
+  'Evapotranspiration': {
+    collection: 'MODIS/061/MOD16A2GF',
+    band: 'ET',
+    ...
+  },
+  'Leaf Area Index': {
+    collection: 'MODIS/061/MOD15A2H',
+    band: 'Lai_500m',
+    ...
+  },
+  ...
+};
+
+// Initialize the application in GEE
+function initializeUI() {
+  var mapPanel = ui.Map();
+  ...
+  // Set up UI panels, legend, and map interactions
+  ...
+}
+
+initializeUI();
+</code>
+      </pre>
+
+      <h2>Conference Poster</h2>
+      <p>
+        Check out the poster of this work that we presented at the ESEARCH program of UC Davis in the summer of 2024.
+        Click on the image below to view the full PDF:
+      </p>
+      <a href="ESEARCH2024_Summer_GVCIP.pdf" target="_blank">
+        <img
+          src="ESEARCH2024_Summer_GVCIP.png"
+          alt="ESEARCH 2024 Poster Preview"
+          style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;"
+        />
+      </a>
+
+      <h2>Contact</h2>
+      <p>
+        For further information, collaborations, or questions, please contact:
+        <br />
+        Mohammadreza Narimani at
+        <a href="mailto:mnarimani@ucdavis.edu">mnarimani@ucdavis.edu</a>.
+      </p>
+      <p>
+        For more information about our lab and other projects, please visit
+        <a href="https://digitalag.ucdavis.edu/" target="_blank">Digital Agriculture Lab</a>.
+      </p>
+    </section>
+  </body>
+</html>
