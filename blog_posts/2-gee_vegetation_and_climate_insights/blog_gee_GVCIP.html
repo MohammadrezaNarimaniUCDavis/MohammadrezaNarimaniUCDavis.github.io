@@ -4,16 +4,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <!-- Page Title -->
     <title>Global Vegetation and Climate Insights Portal (GVCIP) - Blog Post</title>
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../../DataFiles/favicon.png" sizes="32x32" />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="../../main.css" />
 
-    <!-- Fonts & Icons (optional) -->
+    <!-- Fonts & Icons (optional if you'd like consistent styling) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,14 +33,16 @@
     />
   </head>
   <body>
-    <!-- Simple "Back to Blog" link -->
+    <!-- Simple Nav to go back to main blog page -->
     <header>
-      <div class="back-link">
-        <a href="../../blog.html">← Back to Blog</a>
-      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../blog.html">← Back to Blog</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section id="blog-content">
+    <section id="content">
       <h1>Global Vegetation and Climate Insights Portal (GVCIP)</h1>
       <p><strong>Authors:</strong> Mohammadreza Narimani, Nicholas Richmond</p>
 
@@ -53,8 +54,8 @@
         explore environmental conditions across the globe through an interactive map interface.
       </p>
 
-      <h3>Key Functionalities Include:</h3>
-      <ul>
+      <h2>Key Functionalities Include:</h2>
+      <ul style="text-align: left;">
         <li><strong>Interactive Mapping:</strong> View and analyze global environmental data layers dynamically.</li>
         <li><strong>Data Layer Selection:</strong> Users can select from a variety of data layers including NDVI, Evapotranspiration, and Land Surface Temperature.</li>
         <li><strong>Time-Range Filtering:</strong> Adjust the time range to visualize data from specific periods.</li>
@@ -90,7 +91,7 @@
         Below is a short snippet from the <code>Global Vegetation and Climate Insights Portal.js</code> file demonstrating
         how we define some global variables and set up the product layers in GEE:
       </p>
-      <pre style="background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
+<pre style="text-align: left; background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
 <code>
 // Key functionalities: NDVI, ET, LAI, etc.
 var products = {
@@ -117,7 +118,7 @@ function initializeUI() {
 
 initializeUI();
 </code>
-      </pre>
+</pre>
 
       <h2>Conference Poster</h2>
       <p>
