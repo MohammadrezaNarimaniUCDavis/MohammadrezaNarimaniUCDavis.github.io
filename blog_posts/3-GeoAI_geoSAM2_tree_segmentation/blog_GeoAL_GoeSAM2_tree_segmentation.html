@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GeoSAM2 Tree Segmentation - Blog Post</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../DataFiles/favicon.png" sizes="32x32" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../main.css" />
+
+    <!-- Fonts & Icons (optional if you'd like consistent styling) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
+      integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Simple Nav to go back to main blog page -->
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../blog.html">← Back to Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="content">
+      <h1>Enhancing Orchard Management with Deep Learning: Tree Segmentation Using Geospatial SAM2 Model and Aerial Imagery</h1>
+      <p><strong>Authors:</strong> Sarbani Kumar, Mohammadreza Narimani, Ali Moghimi, Alireza Pourreza</p>
+
+      <h2>Project Description</h2>
+      <p>
+        This repository is dedicated to the GeoSAM2 Tree Segmentation project, which utilizes advanced deep
+        learning models for the segmentation of tree canopies from high-resolution aerial imagery. This project
+        is conducted by the Digital Agriculture Laboratory at the University of California, Davis.
+      </p>
+      <p>
+        Our methodology involves marking each tree with rectangular bounding boxes to enhance the segmentation
+        accuracy of the deep learning model. The deployment of SAM2 allows for precise delineation of tree
+        boundaries and computation of each tree's area, offering essential data that directly correlates tree
+        coverage with agricultural yields, fruit, and nut production, and overall biomass. This project not only
+        promises to boost yield predictions and resource allocation but also supports the sustainable management
+        of orchards, positioning it as an indispensable tool in agricultural technology.
+      </p>
+      <p>
+        This initiative is part of the ESEARCH program for Fall 2024 at UC Davis, where graduate students guide
+        undergraduates through a 10-week research project. It aims to provide hands-on research experience and
+        foster practical knowledge in emerging agricultural technologies.
+      </p>
+
+      <h2>Repository Structure</h2>
+      <p>
+        This repository is organized into multiple directories containing data, scripts, and results pertinent to
+        the tree segmentation project:
+      </p>
+      <ul style="text-align: left;">
+        <li>
+          <strong>Data:</strong> Contains raw and processed datasets including aerial images, annotated datasets,
+          and segmentation outputs.
+        </li>
+        <li>
+          <strong>Google Earth Engine Code:</strong> Scripts for processing data within the Google Earth Engine platform
+          (e.g., <code>NAIP_Data_Downloader.js</code>).
+        </li>
+        <li>
+          <strong>Python Code:</strong> Jupyter notebooks and Python scripts for running the segmentation models,
+          data analysis, and generating visualizations.
+        </li>
+        <li>
+          <strong>Shapefiles:</strong> Geospatial data files used for mapping and spatial analysis.
+        </li>
+        <li>
+          <strong>Poster:</strong> A folder containing a visual summary of the project.
+        </li>
+      </ul>
+
+      <h2>Sample Code Snippet</h2>
+      <p>
+        Below is a short snippet from <code>NAIP_Data_Downloader.js</code>, demonstrating how we load NAIP imagery
+        and allow users to draw polygons for area-specific downloads in Google Earth Engine:
+      </p>
+<pre style="text-align: left; background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
+<code>
+// Import the NAIP dataset
+var dataset = ee.ImageCollection('USDA/NAIP/DOQQ')
+                  .filter(ee.Filter.date('2017-01-01', '2018-12-31'));
+var trueColor = dataset.select(['R', 'G', 'B']);
+
+// Visualize
+Map.addLayer(trueColor, {min: 0, max: 255}, 'True Color');
+
+// Export a clipped image to Google Drive
+function exportImage(geometry) {
+  var clippedImage = trueColor.mosaic().clip(geometry);
+  Export.image.toDrive({
+    image: clippedImage,
+    description: 'NAIP_Exported_Image',
+    scale: 0.6,
+    region: geometry
+  });
+}
+</code>
+</pre>
+
+      <h2>Google Earth Engine Repository</h2>
+      <p>
+        To access and use the Google Earth Engine scripts associated with this project, clone our GEE repository:
+      </p>
+      <pre style="background: #f4f4f4; padding: 1rem; border-radius: 5px; overflow: auto;">
+<code>
+https://code.earthengine.google.com/?accept_repo=users/mnarimani/UCDavis_ESEARCH_Fall_2024
+</code>
+      </pre>
+
+      <h2>Explore the App</h2>
+      <p>
+        Experience the application live:
+        <a href="https://ee-mnarimani.projects.earthengine.app/view/deeplearningtreemappingvisualizer" target="_blank">
+          Deep Learning Tree Mapping Visualizer
+        </a>
+      </p>
+
+      <h2>Conference Poster</h2>
+      <p>
+        Check out the poster of this work that we presented at the ESEARCH program of UC Davis in the fall of 2024.
+        Click on the image below to view the full PDF:
+      </p>
+      <a href="ESEARCH_Fall2024_Poster_GeoSAM2_Tree_Segmentation.pdf" target="_blank">
+        <img
+          src="ESEARCH_Fall2024_Poster_GeoSAM2_Tree_Segmentation.png"
+          alt="ESEARCH 2024 Poster Preview"
+          style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;"
+        />
+      </a>
+
+      <h2>Acknowledgments</h2>
+      <p>
+        We extend our deepest gratitude to the Digital Agriculture Laboratory and the respective departments at UC Davis
+        for providing resources and support. Special thanks to Dr. Qiusheng Wu and the Open Geospatial Solutions team
+        for the <em>segment-geospatial</em> library, which has significantly contributed to the success of our project.
+      </p>
+
+      <h2>Contact Information</h2>
+      <p>
+        For more information, queries, or feedback regarding this project, please contact:
+      </p>
+      <ul style="text-align: left;">
+        <li><strong>Mohammadreza Narimani</strong> - <a href="mailto:mnarimani@ucdavis.edu">mnarimani@ucdavis.edu</a></li>
+        <li><strong>Sarbani Kumar</strong> - <a href="mailto:srbkumar@ucdavis.edu">srbkumar@ucdavis.edu</a></li>
+      </ul>
+
+      <p>
+        For more information about our lab and other projects, please visit
+        <a href="https://digitalag.ucdavis.edu/" target="_blank">Digital Agriculture Lab</a>.
+      </p>
+    </section>
+  </body>
+</html>
