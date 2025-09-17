@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3b0b36b74c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/apps.css">
 
 </head>
 <body>
@@ -55,17 +56,213 @@
         <div class="page-content">
             <div class="container">
                 <h1 class="page-title">Apps</h1>
-                <p class="intro-text">
-                    Interactive applications and tools developed for research, education, and data visualization.
-                </p>
                 
-                <div class="coming-soon">
-                    <i class="fas fa-cogs coming-soon-icon"></i>
-                    <h2>Coming Soon</h2>
-                    <p>
-                        Interactive applications and tools for research, education, and data visualization 
-                        will be featured here. Stay tuned for exciting new developments!
-                    </p>
+                <div class="apps-container">
+                    <!-- Apps Introduction -->
+                    <div class="apps-intro">
+                        <h2>Interactive Applications & Tools</h2>
+                        <p>
+                            Explore a collection of interactive web applications and tools developed for research, 
+                            education, and data visualization in digital agriculture, remote sensing, and IoT systems. 
+                            These applications make complex agricultural data accessible and actionable.
+                        </p>
+                    </div>
+
+                    <!-- Featured Applications -->
+                    <div class="featured-apps">
+                        <h2>Featured Applications</h2>
+                        
+                        <div class="featured-card">
+                            <i class="fas fa-chart-line app-icon"></i>
+                            <h3>IoT Greenhouse Monitoring Dashboard</h3>
+                            <p>
+                                Real-time monitoring system for greenhouse environments with temperature, humidity, 
+                                and sensor data visualization. Features both online and offline data collection modes 
+                                for comprehensive agricultural monitoring.
+                            </p>
+                            <div class="app-actions">
+                                <a href="../teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/TAE30TempHumidyOnline.html" class="app-button">
+                                    <i class="fas fa-wifi"></i> View Online Version
+                                </a>
+                                <a href="../teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/TAE30TempHumidyOffline.html" class="app-button">
+                                    <i class="fas fa-database"></i> View Offline Version
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Categories -->
+                    <div class="app-categories">
+                        <h2>Application Categories</h2>
+                        <div class="category-grid">
+                            <div class="category-card">
+                                <i class="fas fa-leaf category-icon"></i>
+                                <h4>Agricultural Monitoring</h4>
+                                <p>Tools for crop health assessment, disease detection, and precision farming applications.</p>
+                            </div>
+                            
+                            <div class="category-card">
+                                <i class="fas fa-satellite category-icon"></i>
+                                <h4>Remote Sensing</h4>
+                                <p>Interactive platforms for satellite and drone imagery analysis and visualization.</p>
+                            </div>
+                            
+                            <div class="category-card">
+                                <i class="fas fa-wifi category-icon"></i>
+                                <h4>IoT Dashboards</h4>
+                                <p>Real-time monitoring interfaces for sensor networks and smart agriculture systems.</p>
+                            </div>
+                            
+                            <div class="category-card">
+                                <i class="fas fa-graduation-cap category-icon"></i>
+                                <h4>Educational Tools</h4>
+                                <p>Interactive learning applications for teaching digital agriculture concepts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Applications -->
+                    <div class="apps-grid">
+                        <div class="app-card">
+                            <i class="fas fa-thermometer-half app-icon"></i>
+                            <h3>Temperature & Humidity Monitor</h3>
+                            <span class="app-status status-live">Live</span>
+                            <p>
+                                Real-time greenhouse monitoring system with interactive charts and data visualization. 
+                                Supports both online connectivity and offline data logging for continuous monitoring.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Sensors</span>
+                            </div>
+                            <div class="app-actions">
+                                <a href="../teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/TAE30TempHumidyOnline.html" class="app-button btn-primary">
+                                    <i class="fas fa-play"></i> Launch App
+                                </a>
+                                <a href="../teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/" class="app-button btn-secondary">
+                                    <i class="fas fa-info-circle"></i> Learn More
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="app-card">
+                            <i class="fas fa-eye app-icon"></i>
+                            <h3>Plant Disease Detection Tool</h3>
+                            <span class="app-status status-development">In Development</span>
+                            <p>
+                                AI-powered application for early detection of plant diseases and parasitic weeds using 
+                                image analysis and machine learning algorithms.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Deep Learning</span>
+                            </div>
+                            <div class="app-actions">
+                                <button class="app-button btn-disabled" disabled>
+                                    <i class="fas fa-clock"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card">
+                            <i class="fas fa-map-marked-alt app-icon"></i>
+                            <h3>Agricultural Field Mapping</h3>
+                            <span class="app-status status-development">In Development</span>
+                            <p>
+                                Interactive mapping tool for agricultural fields with support for drone imagery, 
+                                field boundaries, and crop health visualization.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">Leaflet</span>
+                                <span class="tech-tag">GeoJSON</span>
+                                <span class="tech-tag">Remote Sensing</span>
+                                <span class="tech-tag">GIS</span>
+                            </div>
+                            <div class="app-actions">
+                                <button class="app-button btn-disabled" disabled>
+                                    <i class="fas fa-clock"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card">
+                            <i class="fas fa-chart-bar app-icon"></i>
+                            <h3>Crop Yield Predictor</h3>
+                            <span class="app-status status-planning">Planning</span>
+                            <p>
+                                Machine learning-based tool for predicting crop yields using historical data, 
+                                weather patterns, and satellite imagery analysis.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">R Shiny</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Statistics</span>
+                                <span class="tech-tag">Data Analysis</span>
+                            </div>
+                            <div class="app-actions">
+                                <button class="app-button btn-disabled" disabled>
+                                    <i class="fas fa-clock"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card">
+                            <i class="fas fa-fire app-icon"></i>
+                            <h3>Wildfire Risk Assessment</h3>
+                            <span class="app-status status-planning">Planning</span>
+                            <p>
+                                Real-time wildfire risk assessment tool using satellite data, weather conditions, 
+                                and machine learning for agricultural area protection.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">Google Earth Engine</span>
+                                <span class="tech-tag">Satellite Data</span>
+                                <span class="tech-tag">Risk Analysis</span>
+                                <span class="tech-tag">Web GIS</span>
+                            </div>
+                            <div class="app-actions">
+                                <button class="app-button btn-disabled" disabled>
+                                    <i class="fas fa-clock"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card">
+                            <i class="fas fa-robot app-icon"></i>
+                            <h3>Smart Irrigation Controller</h3>
+                            <span class="app-status status-planning">Planning</span>
+                            <p>
+                                IoT-based irrigation management system with automated scheduling, soil moisture 
+                                monitoring, and water usage optimization for sustainable agriculture.
+                            </p>
+                            <div class="app-technologies">
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Automation</span>
+                                <span class="tech-tag">Water Management</span>
+                            </div>
+                            <div class="app-actions">
+                                <button class="app-button btn-disabled" disabled>
+                                    <i class="fas fa-clock"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Section -->
+                    <div class="coming-soon-section">
+                        <h3><i class="fas fa-rocket"></i> More Applications Coming Soon</h3>
+                        <p>
+                            I'm continuously developing new interactive tools and applications to support research, 
+                            education, and practical applications in digital agriculture. Stay tuned for more exciting 
+                            developments including data visualization dashboards, machine learning demos, and 
+                            educational simulations.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
