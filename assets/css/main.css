@@ -629,6 +629,20 @@ main {
     box-shadow: 0 20px 40px rgba(255, 191, 0, 0.3);
 }
 
+.gis-course {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+    color: white !important;
+}
+
+.gis-course:hover {
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+    color: white !important;
+}
+
+.gis-course * {
+    color: white !important;
+}
+
 .iot-icon {
     animation: pulse 2s infinite;
 }
