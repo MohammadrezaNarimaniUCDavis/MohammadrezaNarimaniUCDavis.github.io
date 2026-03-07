@@ -1,6 +1,19 @@
 # Hide roadmap folder from public repository
 Roadmap/
 
+# SPIE conference paper - do not redistribute (licensing)
+# Source and full text excluded; figures in Markdown/media/ remain for the research page.
+assets/Research/Tomato_Parasitic_Weed_Multispectral/DOCX/
+assets/Research/Tomato_Parasitic_Weed_Multispectral/Markdown/1305304.md
+
+# IFAC conference paper - do not redistribute (licensing)
+assets/Research/Tomato_Parasitic_Weed_Leaf_Spectrometer/DOCX/
+assets/Research/Tomato_Parasitic_Weed_Leaf_Spectrometer/Markdown/1-s2.0-S2405896325024711-main.md
+
+# SPIE 2025 conference paper - do not redistribute (licensing)
+assets/Research/Tomato_Parasitic_Weed_Satellite/DOCX/
+assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/134750U.md
+
 # Common files to ignore
 .DS_Store
 Thumbs.db

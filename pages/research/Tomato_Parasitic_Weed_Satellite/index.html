@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branched Broomrape Detection Using Satellite Imagery and Time-Series Analysis | Mohammadreza Narimani</title>
+    <meta name="description" content="SPIE 2025: Sentinel-2 satellite imagery and LSTM time-series analysis for detecting branched broomrape in tomato farms. Mohammadreza Narimani, UC Davis, Orlando.">
+    <meta name="keywords" content="Mohammadreza Narimani, broomrape detection, Sentinel-2, satellite imagery, LSTM, time-series, SPIE 2025, UC Davis, tomato">
+    <meta name="author" content="Mohammadreza Narimani">
+    <meta property="og:title" content="Satellite Imagery and Time-Series for Broomrape Detection - Mohammadreza Narimani">
+    <meta property="og:description" content="SPIE 2025: Sentinel-2 and LSTM for branched broomrape detection in tomato farms. Presented at SPIE Defense + Commercial Sensing 2025, Orlando.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohammadrezanarimaniucdavis.github.io/pages/research/Tomato_Parasitic_Weed_Satellite/">
+    <meta property="og:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Tomato_Parasitic_Weed_Satellite/Assets/Mohammadreza_Narimani_SPIE_2025_Conference.png">
+    <meta property="og:image:alt" content="Mohammadreza Narimani presenting poster at SPIE Defense + Commercial Sensing 2025 Orlando - satellite imagery and time-series analysis for broomrape detection in tomato farms">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Tomato_Parasitic_Weed_Satellite/Assets/Mohammadreza_Narimani_SPIE_2025_Conference.png">
+    <meta name="twitter:image:alt" content="Mohammadreza Narimani SPIE 2025 Orlando - satellite and LSTM for broomrape detection">
+    <link rel="icon" href="../../../assets/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Branched broomrape detection in tomato farms using satellite imagery and time-series analysis","author":{"@type":"Person","name":"Mohammadreza Narimani","affiliation":{"@type":"Organization","name":"University of California, Davis"}},"image":"https://mohammadrezanarimaniucdavis.github.io/assets/Research/Tomato_Parasitic_Weed_Satellite/Assets/Mohammadreza_Narimani_SPIE_2025_Conference.png","description":"Mohammadreza Narimani presenting at SPIE Defense + Commercial Sensing 2025, Orlando, Florida. Proceedings Volume 13475.","publisher":{"@type":"Organization","name":"SPIE"},"identifier":"https://doi.org/10.1117/12.3059998"}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/icons/favicon.png" alt="Logo">
+                    <span>Research</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../about/">About Me</a></li>
+                    <li><a href="../">Research</a></li>
+                    <li><a href="../../teaching/">Teaching</a></li>
+                    <li><a href="../../apps/">Apps</a></li>
+                    <li><a href="../../blogs/">Blogs</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+                <div class="mobile-dropdown" id="mobileDropdown">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../about/">About Me</a>
+                    <a href="../">Research</a>
+                    <a href="../../teaching/">Teaching</a>
+                    <a href="../../apps/">Apps</a>
+                    <a href="../../blogs/">Blogs</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <div class="container">
+                <h1 class="page-title">🛰️ Branched Broomrape Detection in Tomato Farms Using Satellite Imagery and Time-Series Analysis</h1>
+                <div class="intro-text">
+                    <strong>Mohammadreza Narimani</strong>, Alireza Pourreza, Ali Moghimi, Parastoo Farajpoor, Hamid Jafarbiglu, Mohsen Mesgaran<br>
+                    <strong>SPIE 2025</strong> — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping X<br>
+                    Proceedings Vol. 13475, 134750U | Digital Agriculture Laboratory, UC Davis
+                </div>
+
+                <section class="section" aria-labelledby="spie2025-presentation">
+                    <h2 class="section-title" id="spie2025-presentation"><i class="fas fa-microphone"></i> Presented at SPIE 2025</h2>
+                    <p>This work was presented at <strong>SPIE Defense + Commercial Sensing 2025</strong>, Orlando, Florida, United States — Proceedings Volume 13475, <em>Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping X</em>, 134750U (2025). <a href="https://doi.org/10.1117/12.3059998" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">doi.org/10.1117/12.3059998</a></p>
+                    <figure style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Assets/Mohammadreza_Narimani_SPIE_2025_Conference.png"
+                             alt="Mohammadreza Narimani presenting poster at SPIE Defense and Commercial Sensing 2025 Orlando Florida - branched broomrape detection in tomato farms using satellite imagery and time-series analysis, UC Davis Digital Agriculture Laboratory"
+                             title="Mohammadreza Narimani SPIE 2025 Conference Poster - Satellite Broomrape Detection"
+                             width="800"
+                             style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <figcaption style="font-style: italic; color: var(--accent-color); margin-top: 0.75rem; font-size: 0.95rem;">
+                            <strong>Mohammadreza Narimani</strong> presenting at SPIE Defense + Commercial Sensing 2025, Orlando, Florida. Proceedings Vol. 13475 — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping X.
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-seedling"></i> The Challenge</h2>
+                    <p>Branched broomrape (<em>Phelipanche ramosa</em>) is a chlorophyll-deficient parasitic plant that threatens tomato production by extracting nutrients from host roots, potentially reducing yields by up to 80%. Its lifecycle is largely underground, and each plant can produce over 200,000 seeds that remain viable for up to 20 years—making <strong>early detection</strong> essential. We built an end-to-end pipeline using <strong>Sentinel-2 satellite imagery</strong> and <strong>time-series analysis</strong> to identify broomrape-infested tomato fields at scale, complementing our drone-based and leaf-spectrometer work.</p>
+                    <div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); color: white; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; font-style: italic;">
+                        ✔️ Sentinel-2 • 20 vegetation indices • 5 NN-derived plant traits • GDD alignment • LSTM on 18,874 pixels, 48 GDD steps • 87% test accuracy
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-satellite"></i> Data and Phenology</h2>
+                    <p>We compared five farmer-reported broomrape-infested tomato fields with five non-infested fields in the same region. Sentinel-2 imagery across the growing season was filtered for &lt;10% cloud cover. We used 12 spectral bands plus sun/sensor geometry to compute <strong>20 spectral vegetation indices</strong> (e.g. NDVI, NDMI, EVI) and to derive <strong>five plant traits</strong> from a pretrained neural network: LAI, Leaf Chlorophyll Content (Cab), Canopy Chlorophyll Content (CCC), FAPAR, and FCOVER. Seasonal <strong>CCC trends</strong> were used to identify transplanting, peak vegetation, and harvest—aligning phenology across fields. Figure 1 shows the CCC trajectory and representative imagery at transplanting, peak, and harvest.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/media/image1.jpeg" alt="Seasonal Canopy Chlorophyll Content trend and satellite imagery at transplanting, peak vegetation, and harvest" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 1: (a) Seasonal scaled CCC with transplanting, peak, and harvest phases; (b)–(d) satellite imagery at transplanting, peak CCC, and harvest.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-cogs"></i> GDD Alignment, Vegetation Masking, and LSTM</h2>
+                    <p>We used <strong>Growing Degree Days (GDD)</strong> from the Open-Meteo API to align phenology across fields. Vegetation was segmented from soil and infrastructure using the five plant traits at peak stage (PCA + K-means), so only crop pixels were used. For each pixel we compiled 37 features (12 bands + 20 indices + 5 traits) across <strong>48 GDD time steps</strong>. A two-layer <strong>LSTM</strong> (64 and 32 units, dropout, 39,617 parameters) was trained with five-fold cross-validation (65% train, 15% validation, 30% test, 100 epochs) to classify pixels as infected or non-infected. Figure 2 shows the LSTM architecture and input stack.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/media/image2.jpeg" alt="LSTM architecture and input feature stack over 48 GDD stages" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 2: LSTM architecture and sequential processing of 37 features over 48 GDD stages.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-chart-line"></i> Results</h2>
+                    <p>The model reached <strong>88% training</strong> and <strong>87% test accuracy</strong>, with precision 0.86, recall 0.92, and F1 0.89. High recall is important for reliably detecting infected pixels. Figure 3 shows training/validation accuracy and loss, the normalized confusion matrix, and the performance metrics.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/media/image3.png" alt="Training and validation accuracy and loss; confusion matrix; performance metrics" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 3: (a) Accuracy; (b) loss; (c) normalized confusion matrix; (d) accuracy, precision, recall, F1.</p>
+                    </div>
+                    <p><strong>Permutation feature importance</strong> identified <strong>NDMI</strong> (Normalized Difference Moisture Index), <strong>CCC</strong>, <strong>FAPAR</strong>, and <strong>CHL-RED-EDGE</strong> as the most influential—consistent with broomrape reducing water and chlorophyll. Figure 4 shows the importance ranking; Figure 5 shows kernel density plots at peak vegetation, with non-infected fields having higher values for these four features.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/media/image4.png" alt="Permutation feature importance - NDMI, CCC, FAPAR, CHL-RED-EDGE" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 4: Permutation feature importance for broomrape detection.</p>
+                    </div>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Tomato_Parasitic_Weed_Satellite/Markdown/media/image5.png" alt="KDE plots NDMI, FAPAR, CCC, CHL-RED-EDGE infected vs non-infected at peak vegetation" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 5: Kernel density plots at peak vegetation—non-infected farms show higher NDMI, FAPAR, CCC, and CHL-RED-EDGE.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-quote-left"></i> Publication and Citation</h2>
+                    <div style="background: var(--light-bg); padding: 1.5rem; border-left: 4px solid var(--secondary-color); border-radius: 5px; margin-bottom: 1rem;">
+                        <p><strong>Narimani, M., Pourreza, A., Moghimi, A., Farajpoor, P., Jafarbiglu, H., & Mesgaran, M.</strong> (2025, May). Branched broomrape detection in tomato farms using satellite imagery and time-series analysis. In <em>Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping X</em> (Vol. 13475, pp. 237-243). SPIE.</p>
+                        <p style="margin-top: 1rem;">
+                            <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13475/134750U/Branched-broomrape-detection-in-tomato-farms-using-satellite-imagery-and/10.1117/12.3059998.full" target="_blank" rel="noopener noreferrer" class="contact-btn" style="display: inline-block;">
+                                <i class="fas fa-external-link-alt"></i> Read full paper at SPIE Digital Library
+                            </a>
+                        </p>
+                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">DOI: <a href="https://doi.org/10.1117/12.3059998" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">10.1117/12.3059998</a></p>
+                    </div>
+                    <p><strong>Event:</strong> SPIE Defense + Commercial Sensing 2025, Orlando, Florida, United States.</p>
+                </section>
+
+                <section class="section" style="text-align: center;">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+                    <p><strong>Mohammadreza Narimani</strong><br><em>PhD Candidate, UC Davis</em></p>
+                    <p>📧 <a href="mailto:mnarimani@ucdavis.edu" style="color: var(--primary-color); text-decoration: none;">mnarimani@ucdavis.edu</a> &nbsp;|&nbsp; 🎓 <a href="https://scholar.google.com/citations?user=BV95fNoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">Google Scholar</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Mohammadreza Narimani</div>
+                <div class="footer-text">Personal Website 2025</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
