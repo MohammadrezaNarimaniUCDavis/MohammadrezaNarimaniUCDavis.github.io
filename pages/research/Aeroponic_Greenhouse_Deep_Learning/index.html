@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroponic Smart Greenhouse with Deep Learning & IoT | Mohammadreza Narimani</title>
+    <meta name="description" content="ASABE 2021: Smart aeroponic experimental greenhouse for irrigation control and plant disease detection using deep learning and IoT. Mohammadreza Narimani, University of Tehran.">
+    <meta name="keywords" content="Mohammadreza Narimani, aeroponic greenhouse, IoT, deep learning, VGG-19, plant disease detection, ASABE 2021, University of Tehran, geranium">
+    <meta name="author" content="Mohammadreza Narimani">
+    <meta property="og:title" content="Aeroponic Smart Greenhouse with Deep Learning & IoT - Mohammadreza Narimani">
+    <meta property="og:description" content="ASABE 2021: IoT-controlled aeroponic greenhouse and AI-based disease detection (VGG-19, Inception). Presented at 2021 ASABE Annual International Virtual Meeting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohammadrezanarimaniucdavis.github.io/pages/research/Aeroponic_Greenhouse_Deep_Learning/">
+    <meta property="og:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Aeroponic_Greenhouse_Deep_Learning/Assets/Mohammadreza_Narimani_ASABE_2021_Conference.png">
+    <link rel="icon" href="../../../assets/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <style>
+        /* Equal-size boxes for 3-panel figures; images keep aspect ratio, no stretching */
+        .fig-grid { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; align-items: stretch; margin: 2rem 0; }
+        .fig-grid-item { flex: 1 1 200px; max-width: 280px; aspect-ratio: 4/3; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; background: #f8f9fa; }
+        .fig-grid-item img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .research-fig img { max-width: 100%; height: auto; object-fit: contain; }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Developing an aeroponic smart experimental greenhouse for controlling irrigation and plant disease detection using deep learning and IoT","author":[{"@type":"Person","name":"Mohammadreza Narimani"},{"@type":"Person","name":"Ali Hajiahmad"},{"@type":"Person","name":"Ali Moghimi"}],"description":"ASABE 2021 Annual International Virtual Meeting. IoT-based monitoring and VGG-19/Inception for geranium disease detection.","publisher":{"@type":"Organization","name":"ASABE"},"identifier":"https://doi.org/10.13031/aim.202101252"}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/icons/favicon.png" alt="Logo">
+                    <span>Research</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../about/">About Me</a></li>
+                    <li><a href="../">Research</a></li>
+                    <li><a href="../../teaching/">Teaching</a></li>
+                    <li><a href="../../apps/">Apps</a></li>
+                    <li><a href="../../blogs/">Blogs</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+                <div class="mobile-dropdown" id="mobileDropdown">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../about/">About Me</a>
+                    <a href="../">Research</a>
+                    <a href="../../teaching/">Teaching</a>
+                    <a href="../../apps/">Apps</a>
+                    <a href="../../blogs/">Blogs</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <div class="container">
+                <h1 class="page-title">🌱 Aeroponic Smart Experimental Greenhouse: IoT & Deep Learning for Irrigation and Plant Disease Detection</h1>
+                <div class="intro-text">
+                    <strong>Mohammadreza Narimani</strong>, Ali Hajiahmad, Ali Moghimi, Reza Alimardani, Shahin Rafiee, Amir Hossein Mirzabe<br>
+                    <strong>2021 ASABE Annual International Virtual Meeting</strong> · Paper 2101252<br>
+                    University of Tehran · Department of Mechanics of Biosystem Engineering
+                </div>
+
+                <section class="section" aria-labelledby="asabe2021-presentation">
+                    <h2 class="section-title" id="asabe2021-presentation"><i class="fas fa-microphone"></i> Presented at ASABE 2021</h2>
+                    <p>This work was presented online at the <strong>2021 ASABE Annual International Virtual Meeting</strong> (July 12–16, 2021). ASABE Paper No. 2101252. <a href="https://doi.org/10.13031/aim.202101252" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">doi.org/10.13031/aim.202101252</a></p>
+                    <figure style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Assets/Mohammadreza_Narimani_ASABE_2021_Conference.png"
+                             alt="Mohammadreza Narimani presenting poster at 2021 ASABE Annual International Virtual Meeting - aeroponic smart greenhouse and deep learning for plant disease detection"
+                             title="Mohammadreza Narimani ASABE 2021 - Aeroponic Greenhouse & Deep Learning"
+                             width="800"
+                             style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <figcaption style="font-style: italic; color: var(--accent-color); margin-top: 0.75rem; font-size: 0.95rem;">
+                            <strong>Mohammadreza Narimani</strong> presenting at the 2021 ASABE Annual International Virtual Meeting — IoT-controlled aeroponic greenhouse and AI-based disease detection (VGG-19, InceptionResNetV2, InceptionV3).
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-seedling"></i> The Challenge</h2>
+                    <p>Controlling environmental conditions and monitoring plant status in greenhouses is critical for timely management decisions and crop production. Aeroponic systems offer high water and nutrient efficiency and independence from soil, but achieving optimal growth depends on <strong>instantaneous monitoring</strong> of temperature, humidity, light, irrigation, and disease. This project developed and tested a <strong>smart aeroponic experimental greenhouse</strong> that combines <strong>IoT</strong> for real-time environmental control and data streaming with <strong>deep learning</strong> (VGG-19, InceptionResNetV2, InceptionV3) to detect geranium leaf disease and drought stress from RGB images.</p>
+                    <div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); color: white; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; font-style: italic;">
+                        ✔️ IoT platform (temperature, humidity, water flow, tank volume) · Centrifugal aeroponic irrigation · VGG-19 92% accuracy on industrial data, 86.34% on experimental greenhouse · Ubidots cloud monitoring
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-cogs"></i> Smart Greenhouse Design and Aeroponic System</h2>
+                    <p>A 9 m² indoor structure (3×3 m, 2 m high) was built on the University of Tehran campus with black polycarbonate for light control, artificial lighting (8000 lux), electric heating, cellulose cooling, ultrasonic humidifiers, and ventilation. Plants were grown in polymer aeroponic boxes (53×33×28 cm) with <strong>centrifugal nozzles</strong> supplying nutrient mist to the roots; pumps recirculated the solution to storage tanks with UV disinfection. Figure 1 shows the aeroponic box design and centrifugal irrigation layout; Figure 2 shows the general view of the centrifugal irrigation section.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image2.jpeg" alt="Aeroponic box with centrifugal irrigation - schematic and explosive view" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 1: Aeroponic feeding box based on centrifugal method — schematic and explosive view with plant placement.</p>
+                    </div>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image9.jpeg" alt="General view of centrifugal irrigation part of the greenhouse" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 2: General view of the centrifugal irrigation section.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-tint"></i> Intelligent Irrigation and IoT Data Collection</h2>
+                    <p>Irrigation was scheduled with 10 min on / 5 min off cycles via asynchronous pumps. Sensors (SHT, GY-302, TCS3200, YF-S201, SRF05) measured temperature, humidity, light, water flow, and tank level; data was sent to a central unit and published to the cloud (Ubidots) for remote monitoring. Figure 3 shows the irrigation system components; Figure 4 shows the sensor setup and data flow.</p>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-brain"></i> Deep Learning for Disease and Stress Detection</h2>
+                    <p>Geranium cuttings were placed in the greenhouse; RGB images were captured at 4-day intervals. A database of 1000 images from five industrial greenhouses was labeled into three classes with expert consultation: <strong>healthy</strong>, <strong>drought stress</strong>, and <strong>rust</strong> (Figure 6). Data augmentation (rotation, zoom, horizontal/vertical flip) increased the set to 5000 images. Three pretrained CNNs—<strong>VGG-19</strong>, <strong>InceptionResNetV2</strong>, and <strong>InceptionV3</strong>—were fine-tuned (75% train, 15% validation, 10% test). VGG-19 achieved the highest accuracy (0.9294 on industrial data). The trained models were then evaluated on 798 images from the experimental greenhouse.</p>
+                    <div class="fig-grid fig-grid-3">
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image39.jpeg" alt="Healthy geranium leaves"></div>
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image40.jpeg" alt="Drought stress geranium leaves"></div>
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image41.png" alt="Rust geranium leaves"></div>
+                    </div>
+                    <p style="font-style: italic; color: var(--accent-color); margin-top: -0.5rem; font-size: 0.9rem; text-align: center;">Figure 6: Geranium leaf classes — (A) Healthy, (B) Drought stress, (C) Rust.</p>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-chart-line"></i> Results</h2>
+                    <p>The IoT system published temperature, humidity, water flow, and tank volume to Ubidots in real time (Figure 7). On the experimental greenhouse test set, <strong>VGG-19</strong> reached <strong>86.34%</strong> overall accuracy (94.44% healthy, 75.60% drought stress, 86.34% rust); InceptionResNetV2 reached 81.07% and InceptionV3 78.44%. Figure 8 shows training/validation accuracy for the three networks; Figure 9 shows the confusion matrices on experimental data; Figure 10 summarizes per-class accuracy. VGG-19 consistently outperformed the other two and was best at identifying healthy leaves.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image42.png" alt="Ubidots real-time monitoring dashboard" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 7: Real-time monitoring via Ubidots — temperature, humidity, water flow, tank volume.</p>
+                    </div>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image47.png" alt="VGG-19, InceptionResNetV2, InceptionV3 training accuracy" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 8: Training and validation accuracy — (A) InceptionV3, (B) InceptionResNetV2, (C) VGG-19.</p>
+                    </div>
+                    <div class="fig-grid fig-grid-3">
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image48.jpeg" alt="InceptionV3 confusion matrix"></div>
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image49.jpeg" alt="InceptionResNetV2 confusion matrix"></div>
+                        <div class="fig-grid-item"><img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image50.jpeg" alt="VGG-19 confusion matrix"></div>
+                    </div>
+                    <p style="font-style: italic; color: var(--accent-color); margin-top: -0.5rem; font-size: 0.9rem; text-align: center;">Figure 9: (A) InceptionV3, (B) InceptionResNetV2, (C) VGG-19 confusion matrices on experimental greenhouse test data.</p>
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="../../../assets/Research/Aeroponic_Greenhouse_Deep_Learning/Markdown/media/image51.jpeg" alt="Per-class accuracy and total accuracy in experimental greenhouse" style="max-width: 100%; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <p style="font-style: italic; color: var(--accent-color); margin-top: 0.5rem; font-size: 0.9rem;">Figure 10: Per-class leaf share and accuracy of VGG-19, InceptionResNetV2, InceptionV3 in the experimental greenhouse.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-quote-left"></i> Publication and Citation</h2>
+                    <div style="background: var(--light-bg); padding: 1.5rem; border-left: 4px solid var(--secondary-color); border-radius: 5px; margin-bottom: 1rem;">
+                        <p><strong>Narimani, M., Hajiahmad, A., Moghimi, A., Alimardani, R., Rafiee, S., & Mirzabe, A. H.</strong> (2021). Developing an aeroponic smart experimental greenhouse for controlling irrigation and plant disease detection using deep learning and IoT. In <em>2021 ASABE Annual International Virtual Meeting</em> (p. 1). American Society of Agricultural and Biological Engineers.</p>
+                        <p style="margin-top: 1rem;">
+                            <a href="https://doi.org/10.13031/aim.202101252" target="_blank" rel="noopener noreferrer" class="contact-btn" style="display: inline-block;">
+                                <i class="fas fa-external-link-alt"></i> ASABE Meeting Paper (DOI)
+                            </a>
+                        </p>
+                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Paper No. 2101252 · Presented online July 12–16, 2021 · <a href="https://elibrary.asabe.org/abstract.asp?aid=52586" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">Journal version (ASABE)</a></p>
+                    </div>
+                    <p><strong>Event:</strong> 2021 ASABE Annual International Virtual Meeting.</p>
+                </section>
+
+                <section class="section" style="text-align: center;">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+                    <p><strong>Mohammadreza Narimani</strong><br><em>PhD Candidate, UC Davis</em></p>
+                    <p>📧 <a href="mailto:mnarimani@ucdavis.edu" style="color: var(--primary-color); text-decoration: none;">mnarimani@ucdavis.edu</a> &nbsp;|&nbsp; 🎓 <a href="https://scholar.google.com/citations?user=BV95fNoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">Google Scholar</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Mohammadreza Narimani</div>
+                <div class="footer-text">Personal Website 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
