@@ -1,345 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Website -->
   <url>
     <loc>https://mohammadrezanarimaniucdavis.github.io/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://mohammadrezanarimaniucdavis.github.io/pages/about/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/Tomato_Parasatic_Weed_LiDAR/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/Tomato_Parasitic_Weed_Multispectral/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/Tomato_Parasitic_Weed_Leaf_Spectrometer/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/Tomato_Parasitic_Weed_Satellite/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/research/Aeroponic_Greenhouse_Deep_Learning/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mohammadrezanarimaniucdavis.github.io/pages/teaching/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/CA_Tomato_Landcover_Viewer/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/GEE_Satellite_Plant_Traits_Visualizer/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/GeoSAM2_Tree_Segmentation/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/Sentinel2_Vegetation_Index_Visualizer/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Fall2025/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Spring2024/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Spring2025/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Summer2024/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mohammadrezanarimaniucdavis.github.io/pages/teaching/PLS120-Applied_Statistics_In_Agriculture/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mohammadrezanarimaniucdavis.github.io/pages/teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/TAE30TempHumidyOffline.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/teaching/TAE30-Internet_of_Things_in_Agriculture/IoT_Course/TAE30TempHumidyOnline.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- PLS120 Statistics Lab Materials -->
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/faq.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/CA_Tomato_Landcover_Viewer/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/resources.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/GEE_Satellite_Plant_Traits_Visualizer/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/syllabus.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/GeoSAM2_Tree_Segmentation/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week1.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/apps/Sentinel2_Vegetation_Index_Visualizer/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week2.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week2_Interactive_Tools.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week3.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week3_Interactive_Tools.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week4.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/Week4_Interactive_Tool.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week5.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/Week5_Interactive_Tool.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week6.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/Week6_Interactive_Tool.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week7.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/Week7_Interactive_Tool.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/week8.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/PLS120-Statistics-Lab-Materials/pages/Week8_Interactive_tool.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- TAE30 IoT Lab Materials -->
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/faq.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Spring2024/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/hardware-board-details.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Spring2025/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/hardware-board-overview.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Summer2024/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/hardware-custom-board.html</loc>
-    <lastmod>2025-11-23</lastmod>
+    <loc>https://mohammadrezanarimaniucdavis.github.io/pages/blogs/ESEARCH_Fall2025/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/hardware.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab1.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab10.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab2.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab3.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab4.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab5.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab6.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab7.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab8_part1.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab8_part2.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/lab9.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/resources.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mohammadrezanarimaniucdavis.github.io/TAE30-IoT-Lab-Materials/pages/syllabus.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
