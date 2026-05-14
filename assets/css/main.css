@@ -710,6 +710,22 @@ main {
     font-weight: 600;
 }
 
+/* CTA wrapper to align CTA inside card footer */
+.course-card .course-cta-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Make CTA slightly more compact on small screens */
+@media (max-width: 768px) {
+    .course-card .course-cta {
+        padding: 7px 12px;
+        font-size: 0.9rem;
+        border-radius: 14px;
+    }
+    .course-card .course-cta-wrap { justify-content: center; }
+}
+
 
 .contact-btn {
     display: inline-block;
