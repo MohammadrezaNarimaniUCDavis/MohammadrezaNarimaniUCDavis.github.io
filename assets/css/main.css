@@ -710,6 +710,21 @@ main {
     font-weight: 600;
 }
 
+/* Stronger, card-specific overrides to handle colored card background + inherited color rules */
+.course-card.iot-course .course-cta,
+.course-card.gis-course .course-cta {
+    background: rgba(255,255,255,0.14);
+    color: var(--white) !important;
+    border-radius: 18px;
+    padding: 8px 14px;
+}
+
+/* Ensure light (stats) card keeps the darker text on white CTA */
+.course-card.stats-course .course-cta {
+    background: var(--white);
+    color: var(--primary-color) !important;
+}
+
 /* CTA wrapper to align CTA inside card footer */
 .course-card .course-cta-wrap {
     display: flex;
