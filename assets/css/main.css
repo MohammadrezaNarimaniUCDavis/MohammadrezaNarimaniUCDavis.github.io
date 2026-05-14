@@ -206,16 +206,17 @@ header {
 .qrcode-modal-content {
     background: linear-gradient(135deg, var(--white) 0%, #f5f7fa 100%);
     border-radius: 20px;
-    padding: 40px;
+    padding: clamp(20px, 4vw, 40px);
     max-width: 520px;
-    width: calc(100% - 80px);
-    margin: 20px;
+    width: calc(100% - clamp(30px, 4vw, 80px));
+    margin: clamp(15px, 3vh, 20px);
     box-sizing: border-box;
-    max-height: calc(100vh - 80px);
-    overflow: auto;
+    max-height: calc(100vh - clamp(30px, 6vh, 60px));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
     animation: slideInModal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes slideInModal {
@@ -252,38 +253,38 @@ header {
 
 .qrcode-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: clamp(15px, 3vh, 30px);
 }
 
 .qrcode-header i {
-    font-size: 36px;
+    font-size: clamp(24px, 5vw, 36px);
     color: var(--secondary-color);
-    margin-bottom: 12px;
+    margin-bottom: clamp(6px, 1.5vh, 12px);
     display: block;
 }
 
 .qrcode-header h2 {
     font-family: 'Lora', serif;
     color: var(--primary-color);
-    margin: 0 0 8px 0;
-    font-size: 1.8rem;
+    margin: 0 0 clamp(4px, 1.5vh, 8px) 0;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 
 .qrcode-header p {
     color: #666;
     margin: 0;
-    font-size: 0.95rem;
+    font-size: clamp(0.7rem, 1.8vw, 0.95rem);
 }
 
 .qrcode-container {
-    margin: 30px 0;
+    margin: clamp(15px, 3vh, 30px) 0;
     display: flex;
     justify-content: center;
 }
 
 #qrcodeDisplay {
     background: white !important;
-    padding: 25px !important;
+    padding: clamp(15px, 2.5vw, 25px) !important;
     border-radius: 15px !important;
     box-shadow: 0 4px 20px rgba(2, 40, 81, 0.1) !important;
     display: flex;
@@ -294,8 +295,8 @@ header {
 /* Make canvas and generated img responsive so they never overflow */
 #qrcodeDisplay canvas,
 #qrcodeDisplay img {
-    max-width: min(70vw, 360px);
-    max-height: min(60vh, 360px);
+    max-width: min(60vw, 240px);
+    max-height: min(45vh, 240px);
     width: auto !important;
     height: auto !important;
     border-radius: 10px;
@@ -304,15 +305,17 @@ header {
 
 .qrcode-footer {
     text-align: center;
-    margin-top: 25px;
-    padding-top: 20px;
+    margin-top: clamp(12px, 2.5vh, 25px);
+    padding-top: clamp(12px, 2vh, 20px);
     border-top: 2px solid rgba(255, 191, 0, 0.2);
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .qrcode-footer p {
-    margin: 6px 0;
+    margin: clamp(3px, 1vh, 6px) 0;
     color: var(--text-color);
-    font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
     text-align: center;
     /* force wrapping of long domain strings */
     overflow-wrap: anywhere;
@@ -328,31 +331,19 @@ header {
 /* Mobile QR Code Modal */
 @media (max-width: 768px) {
     .qrcode-modal-content {
-        padding: 20px;
-        max-width: calc(100% - 40px);
+        padding: clamp(15px, 3vw, 20px);
+        max-width: calc(100% - 30px);
+        margin: clamp(12px, 2vh, 15px);
     }
     .qrcode-header i {
-        font-size: 28px;
+        font-size: clamp(22px, 5vw, 28px);
     }
-    .qrcode-header h2 {
-        font-size: 1.4rem;
+    #qrcodeDisplay img,
+    #qrcodeDisplay canvas {
+        max-width: min(55vw, 200px);
+        max-height: min(40vh, 200px);
     }
-    #qrcodeDisplay {
-        padding: 18px !important;
-    }
-}
 
-/* Ensure URL text wraps and has breathing room */
-.qrcode-footer {
-    padding-left: 12px;
-    padding-right: 12px;
-}
-.qrcode-footer p {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    white-space: normal;
-    margin: 6px 0;
-}
 
 .mobile-dropdown.active {
     display: block;
