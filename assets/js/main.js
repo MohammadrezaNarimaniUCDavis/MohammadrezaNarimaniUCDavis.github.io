@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (qrcodeBtn && qrcodeModal && qrcodeCloseBtn && qrcodeDisplay) {
         let qrcodeInstance = null;
         
-        // Open QR Code modal
-        qrcodeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+        // Open QR Code modal (supports click and touch)
+        const openQrModal = function(e) {
+            if (e) e.preventDefault();
             qrcodeModal.style.display = 'flex';
-            
+
             // Generate QR code only when modal is opened
             if (!qrcodeInstance) {
                 qrcodeDisplay.innerHTML = ''; // Clear previous QR code
@@ -58,8 +58,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     colorLight: '#ffffff',
                     correctLevel: QRCode.CorrectLevel.H
                 });
+
+                // Some mobile browsers perform better with an <img> instead of canvas.
+                // Convert canvas (if created) to data URL and replace with an <img> for reliability.
+                setTimeout(function() {
+                    try {
+                        const canvas = qrcodeDisplay.querySelector('canvas');
+                        if (canvas && canvas.toDataURL) {
+                            const img = document.createElement('img');
+                            img.alt = 'QR code for Mohammadreza Narimani website';
+                            img.src = canvas.toDataURL('image/png');
+                            img.style.width = '240px';
+                            img.style.height = '240px';
+                            img.style.borderRadius = '8px';
+                            qrcodeDisplay.innerHTML = ''; // remove canvas/table
+                            qrcodeDisplay.appendChild(img);
+                        }
+                    } catch (err) {
+                        // If conversion fails, leave the original QR element (canvas/table).
+                        console.warn('QR conversion to image failed:', err);
+                    }
+                }, 80);
             }
-        });
+        };
+
+        qrcodeBtn.addEventListener('click', openQrModal);
+        qrcodeBtn.addEventListener('touchstart', function(e) { e.preventDefault(); openQrModal(e); }, {passive: false});
         
         // Close QR Code modal
         qrcodeCloseBtn.addEventListener('click', function() {
