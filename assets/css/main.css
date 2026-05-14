@@ -492,6 +492,30 @@ header {
     color: var(--secondary-color);
 }
 
+/* Mobile-specific: make dropdown flush to right edge and sharp corners */
+@media (max-width: 768px) {
+    .mobile-dropdown {
+        position: fixed;
+        top: 72px; /* header height */
+        right: 0;
+        width: 280px;
+        border-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: 0;
+        box-shadow: 0 10px 30px rgba(1,25,45,0.35);
+    }
+
+    .mobile-dropdown::before,
+    .mobile-dropdown::after {
+        display: none; /* hide caret when fixed and flush */
+    }
+
+    .mobile-dropdown a {
+        padding: 14px 18px;
+    }
+}
+
 /* ===== MAIN CONTENT LAYOUT ===== */
 main {
     flex: 1;
