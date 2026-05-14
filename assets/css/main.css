@@ -331,70 +331,57 @@ header {
 /* Mobile QR Code Modal */
 @media (max-width: 768px) {
     .qrcode-modal {
-        align-items: flex-start;
+        align-items: center;
         padding: 0;
     }
     .qrcode-modal-content {
-        padding: 6px;
-        max-width: none;
-        margin: 0;
-        width: 100vw;
-        height: auto;
-        max-height: 100vh;
-        border-radius: 0;
+        padding: clamp(15px, 3vw, 20px);
+        max-width: calc(100% - 30px);
+        margin: clamp(12px, 2vh, 15px);
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
     }
     .qrcode-close-btn {
-        top: 8px;
-        right: 8px;
+        top: 12px;
+        right: 12px;
         font-size: 28px;
         width: 36px;
         height: 36px;
     }
     .qrcode-header {
-        margin-bottom: 6px;
-        margin-top: 6px;
+        margin-bottom: 10px;
     }
     .qrcode-header i {
-        font-size: clamp(18px, 4vw, 24px);
-        margin-bottom: 2px;
+        font-size: clamp(20px, 4.5vw, 26px);
     }
     .qrcode-header h2 {
-        font-size: clamp(0.95rem, 3.2vw, 1.3rem);
-        margin: 0 0 1px 0;
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+        margin: 0 0 2px 0;
     }
     .qrcode-header p {
-        font-size: clamp(0.6rem, 1.4vw, 0.75rem);
-        margin: 2px 0 0 0;
+        font-size: clamp(0.65rem, 1.5vw, 0.8rem);
     }
     .qrcode-container {
-        margin: 4px 0;
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 8px 0;
     }
     #qrcodeDisplay {
-        padding: 6px !important;
-        margin: 0;
+        padding: 10px !important;
     }
     #qrcodeDisplay img,
     #qrcodeDisplay canvas {
-        max-width: min(48vw, 140px);
-        max-height: min(32vh, 140px);
+        max-width: min(55vw, 200px);
+        max-height: min(40vh, 200px);
     }
     .qrcode-footer {
-        margin-top: 4px;
-        padding-top: 4px;
-        padding-bottom: 6px;
-        padding-left: 6px;
-        padding-right: 6px;
-        border-top: 1px solid rgba(255, 191, 0, 0.2);
+        margin-top: 8px;
+        padding-top: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
     .qrcode-footer p {
-        margin: 1px 0;
-        font-size: clamp(0.55rem, 1.3vw, 0.7rem);
+        margin: 2px 0;
+        font-size: clamp(0.6rem, 1.5vw, 0.8rem);
     }
 }
 
