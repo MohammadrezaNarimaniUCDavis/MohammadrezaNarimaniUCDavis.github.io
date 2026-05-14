@@ -499,9 +499,10 @@ header {
         top: 72px; /* header height */
         right: 0;
         width: 280px;
-        border-radius: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        /* make background match the header ribbon exactly */
+        background: var(--primary-color);
+        /* sharp top corners to visually connect to header, slight curve on bottom-left */
+        border-radius: 0 0 0 12px; /* TL TR BR BL */
         margin-top: 0;
         box-shadow: 0 10px 30px rgba(1,25,45,0.35);
     }
