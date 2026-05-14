@@ -169,13 +169,40 @@ header {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--white);
+    background: linear-gradient(180deg, var(--primary-color), #01293f);
     border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(1, 25, 45, 0.45);
     min-width: 200px;
     z-index: 1001;
     margin-top: 10px;
     overflow: hidden;
+    color: var(--white);
+}
+
+.mobile-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+}
+
+.mobile-dropdown a {
+    display: block;
+    padding: 12px 18px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.mobile-dropdown a:hover,
+.mobile-dropdown a:focus {
+    background: rgba(255, 191, 0, 0.12);
+    color: var(--secondary-color);
+}
+
+.mobile-dropdown a:last-child {
+    border-bottom: none;
 }
 
 /* ===== QR CODE MODAL STYLES ===== */
