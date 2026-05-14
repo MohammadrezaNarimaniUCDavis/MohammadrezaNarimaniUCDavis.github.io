@@ -4,16 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileDropdown = document.getElementById('mobileDropdown');
     
     if (mobileMenuBtn && mobileDropdown) {
-        // Toggle mobile dropdown
+        // Toggle mobile dropdown and animate button
         mobileMenuBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             mobileDropdown.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('open');
         });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!mobileMenuBtn.contains(e.target) && !mobileDropdown.contains(e.target)) {
                 mobileDropdown.classList.remove('active');
+                mobileMenuBtn.classList.remove('open');
             }
         });
         
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileDropdown.classList.remove('active');
+                mobileMenuBtn.classList.remove('open');
             });
         });
         
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 mobileDropdown.classList.remove('active');
+                mobileMenuBtn.classList.remove('open');
             }
         });
     }

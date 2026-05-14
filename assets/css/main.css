@@ -160,6 +160,18 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Hamburger -> Close animation when menu opens */
+.mobile-menu-btn.open .hamburger span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+.mobile-menu-btn.open .hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.mobile-menu-btn.open .hamburger span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
 .mobile-menu-btn:hover .hamburger span {
     background-color: var(--secondary-color);
 }
@@ -177,6 +189,31 @@ header {
     margin-top: 10px;
     overflow: hidden;
     color: var(--white);
+}
+
+/* Small caret to visually connect dropdown to hamburger button */
+.mobile-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 22px; /* aligns with hamburger */
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--primary-color);
+}
+
+/* Slight overlap so caret blends with gradient top color */
+.mobile-dropdown::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    width: 16px;
+    height: 3px;
+    background: linear-gradient(180deg, var(--primary-color), #01293f);
+    border-radius: 2px;
 }
 
 .mobile-dropdown ul {
