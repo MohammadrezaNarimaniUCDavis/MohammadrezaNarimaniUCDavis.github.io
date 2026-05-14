@@ -182,11 +182,14 @@ header {
     top: 100%;
     right: 0;
     background: linear-gradient(180deg, var(--primary-color), #01293f);
+    /* blend with header: remove top radius so it visually connects */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(1, 25, 45, 0.45);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 10px 30px rgba(1, 25, 45, 0.35);
     min-width: 200px;
     z-index: 1001;
-    margin-top: 10px;
+    margin-top: 0; /* remove gap */
     overflow: hidden;
     color: var(--white);
 }
@@ -195,7 +198,7 @@ header {
 .mobile-dropdown::before {
     content: '';
     position: absolute;
-    top: -8px;
+    top: -1px; /* sit almost flush with header bottom */
     right: 22px; /* aligns with hamburger */
     width: 0;
     height: 0;
@@ -204,16 +207,15 @@ header {
     border-bottom: 8px solid var(--primary-color);
 }
 
-/* Slight overlap so caret blends with gradient top color */
+/* Slight overlapping strip to mask any seam and blend with header gradient */
 .mobile-dropdown::after {
     content: '';
     position: absolute;
-    top: -7px;
-    right: 20px;
-    width: 16px;
-    height: 3px;
-    background: linear-gradient(180deg, var(--primary-color), #01293f);
-    border-radius: 2px;
+    top: -1px;
+    right: 16px;
+    width: 24px;
+    height: 6px;
+    background: var(--primary-color);
 }
 
 .mobile-dropdown ul {
