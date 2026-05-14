@@ -330,13 +330,20 @@ header {
 
 /* Mobile QR Code Modal */
 @media (max-width: 768px) {
+    .qrcode-modal {
+        align-items: flex-start;
+        padding: 0;
+    }
     .qrcode-modal-content {
         padding: 6px;
-        max-width: 100%;
+        max-width: none;
         margin: 0;
-        width: 100vw !important;
+        width: 100vw;
+        height: auto;
         max-height: 100vh;
         border-radius: 0;
+        display: flex;
+        flex-direction: column;
     }
     .qrcode-close-btn {
         top: 8px;
@@ -363,6 +370,10 @@ header {
     }
     .qrcode-container {
         margin: 4px 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #qrcodeDisplay {
         padding: 6px !important;
