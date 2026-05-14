@@ -68,9 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             const img = document.createElement('img');
                             img.alt = 'QR code for Mohammadreza Narimani website';
                             img.src = canvas.toDataURL('image/png');
-                            img.style.width = '240px';
-                            img.style.height = '240px';
+                            img.style.maxWidth = '70vw';
+                            img.style.width = 'auto';
+                            img.style.height = 'auto';
                             img.style.borderRadius = '8px';
+                            img.style.display = 'block';
+                            img.style.margin = '0 auto';
                             qrcodeDisplay.innerHTML = ''; // remove canvas/table
                             qrcodeDisplay.appendChild(img);
                         }
@@ -78,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // If conversion fails, leave the original QR element (canvas/table).
                         console.warn('QR conversion to image failed:', err);
                     }
-                }, 80);
+                }, 120);
             }
         };
 
