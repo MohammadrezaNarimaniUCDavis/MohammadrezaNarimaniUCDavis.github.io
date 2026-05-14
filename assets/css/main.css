@@ -295,6 +295,7 @@ header {
 #qrcodeDisplay canvas,
 #qrcodeDisplay img {
     max-width: min(70vw, 360px);
+    max-height: min(60vh, 360px);
     width: auto !important;
     height: auto !important;
     border-radius: 10px;
@@ -309,9 +310,14 @@ header {
 }
 
 .qrcode-footer p {
-    margin: 5px 0;
+    margin: 6px 0;
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+    text-align: center;
+    /* force wrapping of long domain strings */
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    hyphens: auto;
 }
 
 .qrcode-footer strong {
