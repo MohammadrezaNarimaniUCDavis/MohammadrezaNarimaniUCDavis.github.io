@@ -263,6 +263,14 @@ header {
     display: block;
 }
 
+.qrcode-name {
+    color: var(--primary-color);
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+    font-weight: 700;
+    margin: clamp(4px, 1vh, 8px) 0;
+    font-family: 'Lora', serif;
+}
+
 .qrcode-header h2 {
     font-family: 'Lora', serif;
     color: var(--primary-color);
@@ -354,6 +362,10 @@ header {
     }
     .qrcode-header i {
         font-size: clamp(20px, 4.5vw, 26px);
+    }
+    .qrcode-name {
+        font-size: clamp(0.95rem, 3vw, 1.4rem);
+        margin: clamp(3px, 0.8vh, 6px) 0;
     }
     .qrcode-header h2 {
         font-size: clamp(1rem, 3.5vw, 1.4rem);
