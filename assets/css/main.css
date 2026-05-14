@@ -725,10 +725,19 @@ main {
     color: var(--primary-color) !important;
 }
 
+/* Make stats card CTA match colored cards: primary background with white text when card looks light/yellow */
+.course-card.stats-course .course-cta {
+    background: var(--primary-color);
+    color: var(--white) !important;
+    box-shadow: 0 6px 18px rgba(2,40,81,0.18);
+}
+
 /* CTA wrapper to align CTA inside card footer */
 .course-card .course-cta-wrap {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* center horizontally */
+    margin-top: auto; /* push to bottom of card */
+    padding-bottom: 8px;
 }
 
 /* Make CTA slightly more compact on small screens */
