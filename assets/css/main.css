@@ -727,9 +727,15 @@ main {
 
 /* Make stats card CTA match colored cards: primary background with white text when card looks light/yellow */
 .course-card.stats-course .course-cta {
-    background: var(--primary-color);
-    color: var(--white) !important;
-    box-shadow: 0 6px 18px rgba(2,40,81,0.18);
+    /* yellowish CTA to match the stats card palette */
+    background: var(--secondary-color);
+    color: var(--primary-color) !important;
+    box-shadow: 0 6px 18px rgba(34,26,0,0.12);
+}
+
+.course-card.stats-course .course-cta:hover {
+    background: #f0b400; /* slightly darker gold on hover */
+    transform: translateY(-3px);
 }
 
 /* CTA wrapper to align CTA inside card footer */
