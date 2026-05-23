@@ -88,14 +88,14 @@
 
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-robot"></i> Project BloomSense: Our Award-Winning Solution</h2>
-                    <p>For the challenge, we developed <strong>BloomSense</strong>, an advanced robotic system that combines orchard-scale UAV mapping with multi-angle in-canopy imagery captured by an Amiga ground robot. This robust approach produces highly accurate bloom density estimates across varied lighting and canopy structures.</p>
+                    <p>For the challenge, we developed <strong>BloomSense</strong>, an advanced robotic system tailored for almond bloom management. It combines orchard-scale UAV mapping with multi-angle in-canopy imagery captured by a farm-ng Amiga ground robot. We created a close-loop robotic workflow to not only measure bloom density but also direct an autonomous applicator.</p>
 
                     <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 4px solid var(--green-accent);">
                         <ul class="skill-list">
                             <li><strong>Aerial Layer (UAV):</strong> Captures whole-block structure and spatial bloom distribution.</li>
-                            <li><strong>Ground Layer (Amiga Robot):</strong> Drives the rows to gather close-range inside-canopy imagery where aerial vision is limited.</li>
-                            <li><strong>Data Fusion:</strong> The two data streams merge into a unified, high-resolution bloom density map.</li>
-                            <li><strong>Actionable Insights for Growers:</strong> Provides repeatable, early-season measurements that inform pollination strategies, advanced nitrogen planning, and yield-potential assessments in almonds, apples, and other specialty tree crops.</li>
+                            <li><strong>Ground Layer (Amiga Robot):</strong> Drives the rows to gather close-range inside-canopy imagery where aerial vision is limited. Additionally, it carries a mobile bee-activity sensor (FarmSense FlightSensor) to log temporal and spatial pollinator activity.</li>
+                            <li><strong>Multi-Agent AI Framework (3D Gaussian Splatting):</strong> Generates a detailed 3D reconstruction of trees and computes tree-level bloom density computationally, mapping true positive blooms with high precision.</li>
+                            <li><strong>Targeted Intervention (APIS BLOOM):</strong> Combines bloom intensity and pollinator layers to calculate "pollination gap scores." The Amiga ground robot then autonomously navigates and dispenses APIS BLOOMpheromones exclusively in areas where bloom potential is high, but bee visitation is functionally low.</li>
                         </ul>
                     </div>
                     
