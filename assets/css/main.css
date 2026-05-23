@@ -498,7 +498,10 @@ header {
         position: fixed;
         top: 72px; /* header height */
         right: 0;
-        width: 280px;
+        /* shrink to content so short labels do not leave large empty right space */
+        width: fit-content;
+        min-width: 160px;
+        max-width: calc(100vw - 12px);
         /* make background match the header ribbon exactly */
         background: var(--primary-color);
         /* sharp top corners to visually connect to header, slight curve on bottom-left */
@@ -513,7 +516,8 @@ header {
     }
 
     .mobile-dropdown a {
-        padding: 14px 18px;
+        padding: 14px 14px;
+        white-space: nowrap;
     }
 }
 
