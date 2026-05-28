@@ -912,6 +912,16 @@ main {
     color: var(--secondary-color);
 }
 
+.subsection-title {
+    font-family: 'Lora', serif;
+    font-size: 1.4rem;
+    color: var(--blue-accent);
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--accent-color);
+}
+
 .education-item {
     margin-bottom: 25px;
     padding-left: 20px;
