@@ -18,6 +18,7 @@ DOI: [10.1016/j.atech.2026.102405](https://doi.org/10.1016/j.atech.2026.102405)
 - `Markdown/media/fig4-challenges-solutions.jpg` — challenges and solution pathways.
 - `Markdown/media/fig5-evolution-outlook.jpg` — method evolution timeline.
 - `Markdown/media/journal-cover.jpg` — Smart Agricultural Technology cover thumbnail.
+- `Markdown/media/graphical-abstract.jpg` — Elsevier graphical abstract featured on the research page.
 
 Figures were extracted with Poppler `pdfimages` and optimized with Pillow for web delivery.
 
