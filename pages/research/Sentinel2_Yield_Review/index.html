@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel-2 for Crop Yield Estimation: A Systematic Review | Mohammadreza Narimani</title>
+    <meta name="description" content="Systematic review by Mohammadreza Narimani, Alireza Pourreza, Ali Moghimi, and Parastoo Farajpoor on Sentinel-2 crop yield estimation: machine learning, crop-growth data assimilation, and Sentinel-1 fusion. Published in Smart Agricultural Technology (2026).">
+    <meta name="keywords" content="Mohammadreza Narimani, Sentinel-2, crop yield estimation, remote sensing, machine learning, deep learning, data assimilation, precision agriculture, Smart Agricultural Technology, UC Davis">
+    <meta name="author" content="Mohammadreza Narimani">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="citation_title" content="Sentinel-2 for crop yield estimation: A systematic review">
+    <meta name="citation_author" content="Narimani, Mohammadreza">
+    <meta name="citation_author" content="Pourreza, Alireza">
+    <meta name="citation_author" content="Moghimi, Ali">
+    <meta name="citation_author" content="Farajpoor, Parastoo">
+    <meta name="citation_publication_date" content="2026/07/17">
+    <meta name="citation_journal_title" content="Smart Agricultural Technology">
+    <meta name="citation_volume" content="14">
+    <meta name="citation_firstpage" content="102405">
+    <meta name="citation_doi" content="10.1016/j.atech.2026.102405">
+    <meta name="citation_abstract_html_url" content="https://doi.org/10.1016/j.atech.2026.102405">
+    <meta name="citation_pdf_url" content="https://doi.org/10.1016/j.atech.2026.102405">
+    <link rel="canonical" href="https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_Yield_Review/">
+    <link rel="author" href="https://mohammadrezanarimaniucdavis.github.io/">
+    <meta property="og:title" content="Sentinel-2 for Crop Yield Estimation: A Systematic Review | Mohammadreza Narimani">
+    <meta property="og:description" content="How Sentinel-2 moved crop yield estimation from regional maps to field-scale decision support—ML/DL, crop-growth data assimilation, and SAR–optical fusion. Open access in Smart Agricultural Technology (2026).">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_Yield_Review/">
+    <meta property="og:site_name" content="Mohammadreza Narimani">
+    <meta property="article:published_time" content="2026-07-17">
+    <meta property="article:author" content="Mohammadreza Narimani">
+    <meta property="og:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_Yield_Review/Markdown/media/fig1-global-trends.jpg">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="1649">
+    <meta property="og:image:alt" content="Global map and charts of Sentinel-2 crop yield estimation research by Mohammadreza Narimani and coauthors">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sentinel-2 for Crop Yield Estimation | Mohammadreza Narimani">
+    <meta name="twitter:description" content="Open-access systematic review of Sentinel-2 yield estimation: Random Forest to deep learning, WOFOST assimilation, and Sentinel-1 fusion.">
+    <meta name="twitter:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_Yield_Review/Markdown/media/fig1-global-trends.jpg">
+    <meta name="twitter:image:alt" content="Global trends in Sentinel-2 crop yield estimation research">
+    <link rel="icon" href="../../../assets/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <style>
+        .research-hero {
+            background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 45%, #0277BD 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 14px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 24px rgba(27, 94, 32, 0.22);
+        }
+        .research-hero h1 {
+            color: white;
+            margin: 0 0 1rem;
+            line-height: 1.25;
+        }
+        .research-hero p {
+            color: white;
+            margin: 0.35rem 0;
+        }
+        .paper-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.4rem;
+        }
+        .paper-actions .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-card {
+            background: var(--light-bg);
+            border-top: 4px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.1rem;
+            text-align: center;
+        }
+        .stat-value {
+            color: var(--primary-color);
+            display: block;
+            font-size: 1.55rem;
+            font-weight: 700;
+        }
+        .stat-label {
+            color: var(--accent-color);
+            font-size: 0.88rem;
+        }
+        .key-message {
+            background: linear-gradient(135deg, #eef8f0 0%, #e8f4fc 100%);
+            border-left: 5px solid #2e7d32;
+            border-radius: 8px;
+            padding: 1.25rem 1.4rem;
+            margin: 1.5rem 0;
+        }
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .pillar-card {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 1.2rem;
+            border-top: 4px solid #2e7d32;
+        }
+        .pillar-card h3 {
+            color: var(--primary-color);
+            font-size: 1.05rem;
+            margin: 0 0 0.6rem;
+        }
+        .pillar-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+        .research-figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .research-figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+        .research-figure figcaption {
+            color: var(--accent-color);
+            font-size: 0.92rem;
+            font-style: italic;
+            margin-top: 0.7rem;
+        }
+        @media (max-width: 900px) {
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .research-hero {
+                padding: 1.35rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Sentinel-2 for crop yield estimation: A systematic review",
+        "author": [
+            {
+                "@type": "Person",
+                "name": "Mohammadreza Narimani",
+                "url": "https://mohammadrezanarimaniucdavis.github.io/",
+                "sameAs": [
+                    "https://scholar.google.com/citations?user=BV95fNoAAAAJ",
+                    "https://www.linkedin.com/in/mohammadreza-narimani/",
+                    "https://github.com/MohammadrezaNarimaniUCDavis"
+                ],
+                "affiliation": {"@type": "CollegeOrUniversity", "name": "University of California, Davis"}
+            },
+            {"@type": "Person", "name": "Alireza Pourreza"},
+            {"@type": "Person", "name": "Ali Moghimi"},
+            {"@type": "Person", "name": "Parastoo Farajpoor"}
+        ],
+        "affiliation": {"@type": "Organization", "name": "University of California, Davis"},
+        "datePublished": "2026-07-17",
+        "dateModified": "2026-08-20",
+        "url": "https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_Yield_Review/",
+        "mainEntityOfPage": "https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_Yield_Review/",
+        "identifier": "https://doi.org/10.1016/j.atech.2026.102405",
+        "sameAs": [
+            "https://doi.org/10.1016/j.atech.2026.102405",
+            "https://arxiv.org/abs/2603.23779"
+        ],
+        "isPartOf": {
+            "@type": "PublicationVolume",
+            "volumeNumber": "14",
+            "isPartOf": {
+                "@type": "Periodical",
+                "name": "Smart Agricultural Technology"
+            }
+        },
+        "keywords": ["Sentinel-2", "crop yield estimation", "remote sensing", "machine learning", "data assimilation", "precision agriculture"],
+        "about": [
+            {"@type": "Thing", "name": "Crop yield estimation"},
+            {"@type": "Thing", "name": "Sentinel-2 remote sensing"},
+            {"@type": "Thing", "name": "Precision agriculture"}
+        ],
+        "image": "https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_Yield_Review/Markdown/media/fig1-global-trends.jpg",
+        "description": "A systematic review of Sentinel-2-based crop yield estimation spanning empirical machine learning, process-based data assimilation, and multi-sensor fusion.",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/icons/favicon.png" alt="Logo">
+                    <span>Research</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../about/">About Me</a></li>
+                    <li><a href="../">Research</a></li>
+                    <li><a href="../../teaching/">Teaching</a></li>
+                    <li><a href="../../apps/">Apps</a></li>
+                    <li><a href="../../blogs/">Blogs</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+                <div class="mobile-dropdown" id="mobileDropdown">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../about/">About Me</a>
+                    <a href="../">Research</a>
+                    <a href="../../teaching/">Teaching</a>
+                    <a href="../../apps/">Apps</a>
+                    <a href="../../blogs/">Blogs</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <div class="container">
+                <div class="research-hero">
+                    <h1>📡 Sentinel-2 for Crop Yield Estimation: A Systematic Review</h1>
+                    <p><strong>Mohammadreza Narimani</strong>, Alireza Pourreza, Ali Moghimi, and Parastoo Farajpoor</p>
+                    <p><strong>Smart Agricultural Technology</strong> · Volume 14 · Article 102405 · 2026</p>
+                    <p>Digital Agriculture Laboratory · Department of Biological and Agricultural Engineering · University of California, Davis</p>
+                    <div class="paper-actions">
+                        <a class="contact-btn" href="https://doi.org/10.1016/j.atech.2026.102405" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book-open"></i> Read the open-access paper
+                        </a>
+                        <a class="contact-btn" href="https://arxiv.org/abs/2603.23779" target="_blank" rel="noopener noreferrer" style="background: white; color: #1B5E20;">
+                            <i class="fas fa-external-link-alt"></i> View on arXiv
+                        </a>
+                    </div>
+                </div>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-seedling"></i> Why This Review Matters</h2>
+                    <p>Accurate, timely crop yield information underpins food security, agricultural policy, and farm management. Coarse sensors such as MODIS can monitor continents but blur small fields. Landsat improves spatial detail, yet its revisit and cloud sensitivity often miss key phenology. <strong>Sentinel-2</strong> changed that balance: free 10–20 m multispectral imagery, frequent revisits, and red-edge bands that stay informative in dense canopies.</p>
+                    <p>This open-access systematic review by <strong>Mohammadreza Narimani</strong> and colleagues synthesizes peer-reviewed Sentinel-2 yield studies from 2015 onward. Rather than claiming the first Sentinel-2 agriculture review, it delivers a <em>yield-centered</em> comparison of modeling paradigms, input data, validation practice, crop patterns, and operational bottlenecks.</p>
+                    <div class="key-message">
+                        <strong>Core story:</strong> Sentinel-2 moved yield estimation from regional summaries toward field and within-field decision support—through vegetation-index machine learning, crop-growth-model data assimilation, and optical–SAR fusion.
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-globe"></i> A Rapidly Expanding Global Literature</h2>
+                    <p>Publication activity has grown sharply since the mid-2010s, with particularly strong contributions from Asia, Europe, and the Americas. Wheat, maize, rice, and soybean dominate the literature, while specialty and horticultural crops remain comparatively underrepresented—an opportunity for future field-scale work.</p>
+                    <div class="stats-grid" aria-label="Review highlights">
+                        <div class="stat-card"><span class="stat-value">2015–present</span><span class="stat-label">Sentinel-2 era coverage</span></div>
+                        <div class="stat-card"><span class="stat-value">382</span><span class="stat-label">Initial Web of Science hits</span></div>
+                        <div class="stat-card"><span class="stat-value">3</span><span class="stat-label">Core modeling paradigms</span></div>
+                        <div class="stat-card"><span class="stat-value">10–20 m</span><span class="stat-label">Sentinel-2 spatial detail</span></div>
+                        <div class="stat-card"><span class="stat-value">~5 days</span><span class="stat-label">Typical revisit with 2A/2B</span></div>
+                        <div class="stat-card"><span class="stat-value">CC BY</span><span class="stat-label">Open-access license</span></div>
+                    </div>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_Yield_Review/Markdown/media/fig1-global-trends.jpg"
+                             alt="Global map and charts showing geographic distribution, crop study frequency, and continental growth of Sentinel-2 crop yield estimation publications reviewed by Mohammadreza Narimani"
+                             title="Global trends in Sentinel-2 crop yield estimation research"
+                             width="1800" height="1649" loading="lazy">
+                        <figcaption>Figure 1. Global trends: country coverage, crop focus over time, and continental publication growth.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-satellite"></i> Why Sentinel-2 Is a Sweet Spot</h2>
+                    <p>Compared with Landsat 9 (≈30 m, ≈16-day revisit) and PlanetScope (≈3 m, near-daily but fewer spectral bands), Sentinel-2 sits in a practical middle ground for yield mapping: sharp enough for many field boundaries, rich enough for chlorophyll-sensitive red-edge indices such as <strong>NDRE</strong> and <strong>MTCI</strong>, and frequent enough to track canopy development through the season.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_Yield_Review/Markdown/media/fig2-sensor-comparison.jpg"
+                             alt="Comparison of Landsat 9, Sentinel-2, and PlanetScope spatial resolution, spectral bands, and revisit frequency for crop monitoring"
+                             title="Satellite platform comparison for crop monitoring"
+                             width="1800" height="1787" loading="lazy">
+                        <figcaption>Figure 2. Spatial, spectral, and temporal comparison of Landsat 9, Sentinel-2, and PlanetScope.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-diagram-project"></i> Three Modeling Paradigms</h2>
+                    <div class="pillar-grid">
+                        <div class="pillar-card">
+                            <h3>1. Empirical ML / Deep Learning</h3>
+                            <p>Vegetation indices and spectral time series feed Random Forest, SVM, gradient boosting, CNNs, LSTMs, and related models that capture nonlinear spectral–yield relationships.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>2. Crop-Growth Data Assimilation</h3>
+                            <p>Sentinel-2 biophysical variables—especially LAI—constrain process models such as WOFOST, SAFY, APSIM, and CERES-Wheat for physiologically grounded forecasts.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>3. Multi-Sensor Fusion</h3>
+                            <p>Sentinel-1 SAR fills optical cloud gaps; weather, soil, and topography further explain within-field yield variability when fused with Sentinel-2 features.</p>
+                        </div>
+                    </div>
+                    <p>Across the reviewed literature, <strong>machine learning is the most common family</strong>, with Random Forest appearing most frequently, followed by classical regression and a rapidly growing deep-learning share. Process-based assimilation and hybrid/ensemble designs remain smaller but strategically important for transferability and physical consistency.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_Yield_Review/Markdown/media/fig3-modeling-approaches.jpg"
+                             alt="Bar chart, pie chart, and co-occurrence heatmap of modeling approaches used in Sentinel-2 crop yield estimation studies including Random Forest, SVM, neural networks, and data assimilation"
+                             title="Modeling approaches for Sentinel-2 yield estimation"
+                             width="1800" height="1513" loading="lazy">
+                        <figcaption>Figure 3. Modeling landscape: method frequency, category share, and common head-to-head comparisons.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> Challenges and Practical Solutions</h2>
+                    <p>Even strong Sentinel-2 frameworks struggle with scarce ground-truth yields, cloud gaps, VI saturation in dense canopies, weak cross-region transfer, high compute cost, and early-season soil background. The review pairs each bottleneck with actionable pathways: harvester GPS yields, Sentinel-1 fusion, red-edge indices, explainable AI (e.g., SHAP), Google Earth Engine / HPC workflows, phenology-aware timing, and higher-resolution optical fusion where needed.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_Yield_Review/Markdown/media/fig4-challenges-solutions.jpg"
+                             alt="Infographic of challenges and solutions in Sentinel-2 yield estimation covering data quality, methods, compute, operations, and agricultural complexity"
+                             title="Challenges and solutions in Sentinel-2 yield estimation"
+                             width="1800" height="1352" loading="lazy">
+                        <figcaption>Figure 4. Challenge categories mapped to integrated solution pathways for more reliable yield estimation.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-timeline"></i> From NDVI Regressions to Next-Generation AI</h2>
+                    <p>Methodologically, the field has moved from simple vegetation-index regressions toward machine learning, then deep learning and multi-sensor fusion, and now toward knowledge-guided models, foundation-model pre-training, explainable AI, and operational deployment. The trajectory is clear: higher skill is possible, but only when models are paired with better labels, uncertainty reporting, and transferable designs.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_Yield_Review/Markdown/media/fig5-evolution-outlook.jpg"
+                             alt="Timeline of satellite-based crop monitoring methods from 2015 simple NDVI models through machine learning and deep learning fusion to future AI for yield estimation"
+                             title="Evolution of Sentinel-2 yield estimation methods"
+                             width="1800" height="1076" loading="lazy">
+                        <figcaption>Figure 5. Evolution and outlook: simple methods → ML → deep learning &amp; fusion → future knowledge-guided and foundation-model AI.</figcaption>
+                    </figure>
+                    <div class="key-message">
+                        <strong>Takeaway for practitioners and researchers:</strong> Sentinel-2 already supports powerful field-scale yield workflows. The next gains will come less from another incremental model tweak and more from curated multi-year yield datasets, transparent uncertainty, hybrid physical–ML thinking, and robust multi-sensor pipelines.
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-quote-left"></i> Paper and Citation</h2>
+                    <div style="background: var(--light-bg); padding: 1.5rem; border-left: 4px solid var(--secondary-color); border-radius: 5px;">
+                        <p><strong>Narimani, M., Pourreza, A., Moghimi, A., &amp; Farajpoor, P.</strong> (2026). Sentinel-2 for crop yield estimation: A systematic review. <em>Smart Agricultural Technology</em>, <em>14</em>, 102405.</p>
+                        <p style="margin-top: 0.75rem;">DOI: <a href="https://doi.org/10.1016/j.atech.2026.102405" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">10.1016/j.atech.2026.102405</a> · Open access under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">CC BY 4.0</a></p>
+                        <div class="paper-actions">
+                            <a class="contact-btn" href="https://doi.org/10.1016/j.atech.2026.102405" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Read at ScienceDirect / Elsevier
+                            </a>
+                            <a class="contact-btn" href="https://arxiv.org/abs/2603.23779" target="_blank" rel="noopener noreferrer" style="background: white; color: #1B5E20;">
+                                <i class="fas fa-file-alt"></i> Preprint on arXiv
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" style="text-align: center;">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+                    <p><strong>Mohammadreza Narimani</strong><br><em>PhD Candidate, University of California, Davis</em></p>
+                    <p>📧 <a href="mailto:mnarimani@ucdavis.edu" style="color: var(--primary-color); text-decoration: none;">mnarimani@ucdavis.edu</a> &nbsp;|&nbsp; 🎓 <a href="https://scholar.google.com/citations?user=BV95fNoAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">Google Scholar</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Mohammadreza Narimani</div>
+                <div class="footer-text">Personal Website 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
