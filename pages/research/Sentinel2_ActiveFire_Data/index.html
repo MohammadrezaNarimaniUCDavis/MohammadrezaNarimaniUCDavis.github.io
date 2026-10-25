@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel-2 Active-Fire Benchmark Dataset | Mohammadreza Narimani</title>
+    <meta name="description" content="Open Sentinel-2 benchmark by Mohammadreza Narimani, Shreyan Mitra, and Parastoo Farajpoor: 2,148 chips from 25 California wildfires for deep-learning active-fire segmentation. Data in Brief 113357 (2026).">
+    <meta name="keywords" content="Mohammadreza Narimani, Sentinel-2, active fire, wildfire segmentation, deep learning, California wildfires, Data in Brief, UC Davis, SWIR, U-Net">
+    <meta name="author" content="Mohammadreza Narimani">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="citation_title" content="A Sentinel-2 benchmark dataset for deep-learning active-fire segmentation across 25 California wildfires, July 2020–August 2026">
+    <meta name="citation_author" content="Mitra, Shreyan">
+    <meta name="citation_author" content="Narimani, Mohammadreza">
+    <meta name="citation_author" content="Farajpoor, Parastoo">
+    <meta name="citation_publication_date" content="2026/10/15">
+    <meta name="citation_journal_title" content="Data in Brief">
+    <meta name="citation_volume" content="69">
+    <meta name="citation_firstpage" content="113357">
+    <meta name="citation_doi" content="10.1016/j.dib.2026.113357">
+    <meta name="citation_abstract_html_url" content="https://doi.org/10.1016/j.dib.2026.113357">
+    <meta name="citation_pdf_url" content="https://doi.org/10.1016/j.dib.2026.113357">
+    <link rel="canonical" href="https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_ActiveFire_Data/">
+    <link rel="author" href="https://mohammadrezanarimaniucdavis.github.io/">
+    <meta property="og:title" content="Sentinel-2 Active-Fire Benchmark Dataset | Mohammadreza Narimani">
+    <meta property="og:description" content="Open Sentinel-2 benchmark by Mohammadreza Narimani, Shreyan Mitra, and Parastoo Farajpoor: 2,148 chips from 25 California wildfires for deep-learning active-fire segmentation. Data in Brief 113357 (2026).">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_ActiveFire_Data/">
+    <meta property="og:site_name" content="Mohammadreza Narimani">
+    <meta property="article:published_time" content="2026-10-15">
+    <meta property="article:author" content="Mohammadreza Narimani">
+    <meta property="og:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_02.jpg">
+    <meta property="og:image:alt" content="Mohammadreza Narimani Sentinel-2 California active-fire dataset map of 25 wildfires colored by train, validation, and test split">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sentinel-2 Active-Fire Benchmark Dataset | Mohammadreza Narimani">
+    <meta name="twitter:description" content="Open Sentinel-2 benchmark by Mohammadreza Narimani, Shreyan Mitra, and Parastoo Farajpoor: 2,148 chips from 25 California wildfires for deep-learning active-fire segmentation. Data in Brief 113357 (2026).">
+    <meta name="twitter:image" content="https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_02.jpg">
+    <meta name="twitter:image:alt" content="Mohammadreza Narimani Sentinel-2 California active-fire dataset map of 25 wildfires colored by train, validation, and test split">
+    <link rel="icon" href="../../../assets/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/research-post.css">
+    <style>
+        .research-hero {
+            background: linear-gradient(135deg, #7B1113 0%, #C62828 48%, #E65100 100%);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "A Sentinel-2 benchmark dataset for deep-learning active-fire segmentation across 25 California wildfires, July 2020–August 2026",
+        "author": [
+            {"@type": "Person", "name": "Shreyan Mitra"},
+            {
+                "@type": "Person",
+                "name": "Mohammadreza Narimani",
+                "url": "https://mohammadrezanarimaniucdavis.github.io/",
+                "sameAs": [
+                    "https://scholar.google.com/citations?user=BV95fNoAAAAJ",
+                    "https://www.linkedin.com/in/mohammadreza-narimani/",
+                    "https://github.com/MohammadrezaNarimaniUCDavis"
+                ],
+                "affiliation": {"@type": "CollegeOrUniversity", "name": "University of California, Davis"}
+            },
+            {"@type": "Person", "name": "Parastoo Farajpoor"}
+        ],
+        "affiliation": {"@type": "Organization", "name": "University of California, Davis"},
+        "datePublished": "2026-10-15",
+        "url": "https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_ActiveFire_Data/",
+        "mainEntityOfPage": "https://mohammadrezanarimaniucdavis.github.io/pages/research/Sentinel2_ActiveFire_Data/",
+        "identifier": "https://doi.org/10.1016/j.dib.2026.113357",
+        "sameAs": [
+            "https://doi.org/10.1016/j.dib.2026.113357",
+            "https://doi.org/10.5281/zenodo.22713948",
+            "https://github.com/MohammadrezaNarimaniUCDavis/California_Sentinel2_Active_Fire_Dataset"
+        ],
+        "isPartOf": {
+            "@type": "Periodical",
+            "name": "Data in Brief"
+        },
+        "keywords": ["Sentinel-2", "active fire", "wildfire", "deep learning", "image segmentation", "California"],
+        "about": [
+            {"@type": "Thing", "name": "Active-fire segmentation"},
+            {"@type": "Thing", "name": "Sentinel-2 remote sensing"},
+            {"@type": "Thing", "name": "Wildfire machine learning"}
+        ],
+        "image": "https://mohammadrezanarimaniucdavis.github.io/assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_02.jpg",
+        "description": "Open Sentinel-2 benchmark by Mohammadreza Narimani, Shreyan Mitra, and Parastoo Farajpoor: 2,148 chips from 25 California wildfires for deep-learning active-fire segmentation. Data in Brief 113357 (2026).",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/icons/favicon.png" alt="Logo">
+                    <span>Research</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../about/">About Me</a></li>
+                    <li><a href="../">Research</a></li>
+                    <li><a href="../../teaching/">Teaching</a></li>
+                    <li><a href="../../apps/">Apps</a></li>
+                    <li><a href="../../blogs/">Blogs</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+                <div class="mobile-dropdown" id="mobileDropdown">
+                    <a href="../../../index.html">Home</a>
+                    <a href="../../about/">About Me</a>
+                    <a href="../">Research</a>
+                    <a href="../../teaching/">Teaching</a>
+                    <a href="../../apps/">Apps</a>
+                    <a href="../../blogs/">Blogs</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <div class="container">
+                <div class="research-hero">
+                    <h1>🔥 A Sentinel-2 Benchmark for Deep-Learning Active-Fire Segmentation</h1>
+                    <p><strong>Shreyan Mitra</strong>, <strong>Mohammadreza Narimani</strong>* (corresponding author), and Parastoo Farajpoor</p>
+                    <p><strong>Data in Brief</strong> · Volume 69 · Article 113357 · 2026 · Open access CC BY 4.0</p>
+                    <p>Department of Biological and Agricultural Engineering · University of California, Davis</p>
+                    <div class="paper-actions">
+                        <a class="contact-btn" href="https://doi.org/10.1016/j.dib.2026.113357" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book-open"></i> Read the open-access paper
+                        </a>
+                        <a class="contact-btn" href="https://doi.org/10.5281/zenodo.22713948" target="_blank" rel="noopener noreferrer" style="background: white; color: #022851;">
+                            <i class="fas fa-database"></i> Download the dataset (Zenodo)
+                        </a>
+                        <a class="contact-btn" href="https://github.com/MohammadrezaNarimaniUCDavis/California_Sentinel2_Active_Fire_Dataset" target="_blank" rel="noopener noreferrer" style="background: white; color: #022851;">
+                            <i class="fas fa-code"></i> Code on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-fire"></i> Why This Dataset</h2>
+                    <p>An active-fire mask locates ongoing combustion in a satellite scene. It is not a burn-scar map. Sentinel-2 shortwave infrared at 20 m can reveal those cores, but comparing segmentation models requires a shared rendering, a documented label rule, and a split that does not leak the same wildfire into training and test.</p>
+                    <p>This open <em>Data in Brief</em> article by <strong>Mohammadreza Narimani</strong> (corresponding author), Shreyan Mitra, and Parastoo Farajpoor releases a fixed archive of <strong>2,148 image–mask pairs</strong> from <strong>25 California wildfires</strong> (23 July 2020–21 August 2026). Images are 512 × 512 three-channel composites of Sentinel-2 Level-2A bands <strong>B12, B11, and B8A</strong> with a single linear rendering. Masks code background (0), SWIR-rule active fire (1), and invalid observations (255).</p>
+                    <div class="key-message">
+                        <strong>Core story:</strong> a rare-class, incident-disjoint Sentinel-2 benchmark so researchers can train and compare active-fire segmentation methods on wildfires held out from training—without re-querying Earth Search each time.
+                    </div>
+                    <div class="stats-grid" aria-label="Dataset highlights">
+                        <div class="stat-card"><span class="stat-value">2,148</span><span class="stat-label">Image–mask chips</span></div>
+                        <div class="stat-card"><span class="stat-value">25</span><span class="stat-label">California wildfires</span></div>
+                        <div class="stat-card"><span class="stat-value">512 × 512</span><span class="stat-label">20 m SWIR chips</span></div>
+                        <div class="stat-card"><span class="stat-value">841</span><span class="stat-label">Chips with fire labels</span></div>
+                        <div class="stat-card"><span class="stat-value">0.0766%</span><span class="stat-label">Fire pixels in the archive</span></div>
+                        <div class="stat-card"><span class="stat-value">CC BY 4.0</span><span class="stat-label">Open data and paper</span></div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-layer-group"></i> Incident-Disjoint Splits</h2>
+                    <p>Partitions are assigned by wildfire name: <strong>18 / 3 / 4</strong> fires for train / validation / test (1,470 / 246 / 432 chips). Castle, McCash, and Bobcat are reserved for validation; Slater, Hopkins, CALDWELL, and Windy are reserved for testing. Every chip from a fire stays in one set, so grouped evaluation is possible on events the model has never seen.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_01.jpg"
+                             alt="Mohammadreza Narimani Sentinel-2 active-fire dataset overview showing 2148 chips, incident-disjoint train validation test split, and rare-class fire pixel prevalence"
+                             title="Mohammadreza Narimani Sentinel-2 active-fire dataset overview showing 2148 chips, incident-disjoint train validation test split, and rare-class fire pixel prevalence"
+                             loading="lazy">
+                        <figcaption>Figure 1. Dataset overview: chips by partition, incident-disjoint wildfire split, and rare-class prevalence.</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_02.jpg"
+                             alt="Map of 25 California wildfires in the Mohammadreza Narimani Sentinel-2 active-fire benchmark colored by train, validation, and held-out test split"
+                             title="Map of 25 California wildfires in the Mohammadreza Narimani Sentinel-2 active-fire benchmark colored by train, validation, and held-out test split"
+                             loading="lazy">
+                        <figcaption>Figure 2. California fires in the archive, colored by the published hold-out split.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-satellite"></i> SWIR Labeling and Example Chips</h2>
+                    <p>Labels come from shortwave-infrared brightness and near-infrared contrast, then two steps of neighborhood growth. Hand-drawn regions of interest show why B11 and B12 separate active flame from vegetation, char, and bright smoke. True-color RGB often hides the same cores under smoke.</p>
+                    <p>Fire labels occupy only <strong>431,427</strong> grid cells. Median fire area on a positive chip is 79 pixels; most connected clusters are small hotspots. Accuracy is therefore a poor headline metric—precision, recall, and overlap on rare positives matter more.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_03.jpg"
+                             alt="Mohammadreza Narimani Sentinel-2 SWIR band contrast for active-fire labeling with box plots of B8A B11 B12 and a composite scene of flame, char, vegetation, and smoke"
+                             title="Mohammadreza Narimani Sentinel-2 SWIR band contrast for active-fire labeling with box plots of B8A B11 B12 and a composite scene of flame, char, vegetation, and smoke"
+                             loading="lazy">
+                        <figcaption>Figure 3. Spectral contrast used for algorithmic active-fire labeling (B8A, B11, B12).</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_04.jpg"
+                             alt="Example Sentinel-2 chips from Mohammadreza Narimani California active-fire dataset showing true-color RGB, SWIR composite, and active-fire masks for York, Castle, Sugar, and Hopkins fires"
+                             title="Example Sentinel-2 chips from Mohammadreza Narimani California active-fire dataset showing true-color RGB, SWIR composite, and active-fire masks for York, Castle, Sugar, and Hopkins fires"
+                             loading="lazy">
+                        <figcaption>Figure 4. Example chips: true-color, SWIR composite (B12–B11–B8A), and the SWIR-rule fire mask.</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_05.jpg"
+                             alt="Mohammadreza Narimani figure on rare-class geometry in Sentinel-2 active-fire chips showing fire area per positive chip and small hotspot cluster sizes"
+                             title="Mohammadreza Narimani figure on rare-class geometry in Sentinel-2 active-fire chips showing fire area per positive chip and small hotspot cluster sizes"
+                             loading="lazy">
+                        <figcaption>Figure 5. Rare-class geometry: why overall accuracy is misleading when fire pixels are sparse.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-user-check"></i> Analyst Review and Reference Model</h2>
+                    <p>An analyst reviewed <strong>233 of 432 test chips</strong> without seeing the rule masks. Chip-level agreement was <strong>89.7%</strong> and rule-component confirmation was <strong>88.5%</strong>. Those annotations stay separate from the training labels so users can score agreement independently.</p>
+                    <p>The companion repository includes dataset construction code and a <strong>ResNet-34 U-Net</strong> reference run with validation-based threshold selection. Dataset version <strong>1.0.0</strong> is pinned on Zenodo; software is MIT-licensed on GitHub. Use those versions if you want comparisons tied to this paper.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_06.jpg"
+                             alt="Mohammadreza Narimani 40-epoch ResNet-34 U-Net reference run showing training and validation loss and validation fire-class IoU for Sentinel-2 active-fire segmentation"
+                             title="Mohammadreza Narimani 40-epoch ResNet-34 U-Net reference run showing training and validation loss and validation fire-class IoU for Sentinel-2 active-fire segmentation"
+                             loading="lazy">
+                        <figcaption>Figure 6. Reported 40-epoch reference run: training/validation loss and validation fire-class IoU.</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_07.jpg"
+                             alt="Mohammadreza Narimani reference-model agreement with SWIR-rule labels and independent analyst review of Sentinel-2 active-fire test chips"
+                             title="Mohammadreza Narimani reference-model agreement with SWIR-rule labels and independent analyst review of Sentinel-2 active-fire test chips"
+                             loading="lazy">
+                        <figcaption>Figure 7. Reference-model agreement with rule labels and independent analyst review (233 of 432 test chips).</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_08.jpg"
+                             alt="Mohammadreza Narimani ResNet-34 U-Net predictions on held-out Hopkins and Slater Sentinel-2 chips compared with SWIR-rule fire masks"
+                             title="Mohammadreza Narimani ResNet-34 U-Net predictions on held-out Hopkins and Slater Sentinel-2 chips compared with SWIR-rule fire masks"
+                             loading="lazy">
+                        <figcaption>Figure 8. Held-out predictions for Hopkins and Slater: SWIR composite versus model overlay (magenta) and rule mask (green).</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_09.jpg"
+                             alt="Mohammadreza Narimani bar chart of active-fire pixel counts by California wildfire incident grouped into train, validation, and test partitions"
+                             title="Mohammadreza Narimani bar chart of active-fire pixel counts by California wildfire incident grouped into train, validation, and test partitions"
+                             loading="lazy">
+                        <figcaption>Figure 9. Active-fire pixel-observations by incident, grouped into the published train, validation, and test splits.</figcaption>
+                    </figure>
+                    <div class="pillar-grid">
+                        <div class="pillar-card">
+                            <h3>Fixed inputs</h3>
+                            <p>PNG images and integer masks with chip metadata, so methods can share the same files without reprocessing Sentinel-2 scenes.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Grouped evaluation</h3>
+                            <p>Wildfire-level partitions prevent the same incident from appearing in both training and test.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Rare-class design</h3>
+                            <p>Documented imbalance, invalid-pixel coding, and analyst review for honest segmentation metrics.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-quote-left"></i> Paper and Citation</h2>
+                    <div class="cite-box">
+                        <p><strong>Mitra, S., Narimani, M., &amp; Farajpoor, P.</strong> (2026). A Sentinel-2 benchmark dataset for deep-learning active-fire segmentation across 25 California wildfires, July 2020–August 2026. <em>Data in Brief</em>, <em>69</em>, 113357.</p>
+                        <p style="margin-top: 0.75rem;">DOI: <a href="https://doi.org/10.1016/j.dib.2026.113357" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">10.1016/j.dib.2026.113357</a> · Data: <a href="https://doi.org/10.5281/zenodo.22713948" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">10.5281/zenodo.22713948</a> · Open access under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">CC BY 4.0</a></p>
+                        <p style="margin-top: 0.75rem;">Please cite the publisher version when you use this work. The summary on this page is a research card, not a substitute for the article.</p>
+                        <div class="paper-actions">
+                            <a class="contact-btn" href="https://doi.org/10.1016/j.dib.2026.113357" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Cite and read the paper
+                            </a>
+                        <a class="contact-btn" href="https://doi.org/10.5281/zenodo.22713948" target="_blank" rel="noopener noreferrer" style="background: white; color: #022851;">
+                            <i class="fas fa-database"></i> Zenodo dataset
+                        </a>
+                        <a class="contact-btn" href="https://github.com/MohammadrezaNarimaniUCDavis/California_Sentinel2_Active_Fire_Dataset" target="_blank" rel="noopener noreferrer" style="background: white; color: #022851;">
+                            <i class="fas fa-code"></i> GitHub software
+                        </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" style="text-align: center;">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+                    <p><strong>Mohammadreza Narimani</strong><br><em>PhD Candidate, University of California, Davis</em></p>
+                    <p>📧 <a href="mailto:mnarimani@ucdavis.edu" style="color: var(--primary-color); text-decoration: none;">mnarimani@ucdavis.edu</a> &nbsp;|&nbsp; 🎓 <a href="https://scholar.google.com/citations?user=BV95fNoAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">Google Scholar</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Mohammadreza Narimani</div>
+                <div class="footer-text">Personal Website 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

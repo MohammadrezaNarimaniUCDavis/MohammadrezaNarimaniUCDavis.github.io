@@ -26,6 +26,24 @@ assets/Research/Tomato_Satellite_Mapping_ASABE_2026/Assets/Mohammadreza_Narimani
 assets/Research/Sentinel2_Yield_Review/Assets/*.pdf
 assets/Research/Sentinel2_Yield_Review/Markdown/paper.txt
 
+# Local UC Davis / fellowship CV — keep on this laptop only
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.tex
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.pdf
+assets/documents/Narimani, Mohammadreza - CV.pdf
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.aux
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.out
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.log
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.fls
+assets/documents/Mohammadreza_Narimani_CV_ucdavis.fdb_latexmk
+
+# Publisher PDFs and extracted full-text — do not redistribute
+assets/Research/**/*.pdf
+assets/Research/**/Markdown/paper.txt
+assets/Research/**/Markdown/*extracted.md
+assets/Research/**/Markdown/media/_*.jpg
+assets/Research/**/DOCX/
+assets/Research/_*.py
+
 # Common files to ignore
 .DS_Store
 Thumbs.db

@@ -1,0 +1,118 @@
+.research-hero {
+    color: white;
+    padding: 2rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(2, 40, 81, 0.18);
+}
+.research-hero h1 {
+    color: white;
+    margin: 0 0 1rem;
+    line-height: 1.25;
+}
+.research-hero p {
+    color: white;
+    margin: 0.35rem 0;
+}
+.paper-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.4rem;
+}
+.paper-actions .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.stat-card {
+    background: var(--light-bg);
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.1rem;
+    text-align: center;
+}
+.stat-value {
+    color: var(--primary-color);
+    display: block;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+.stat-label {
+    color: var(--accent-color);
+    font-size: 0.88rem;
+}
+.key-message {
+    background: linear-gradient(135deg, #eef4fb 0%, #fff8e6 100%);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0;
+}
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.pillar-card {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 1.2rem;
+    border-top: 4px solid var(--primary-color);
+}
+.pillar-card h3 {
+    color: var(--primary-color);
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem;
+}
+.pillar-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #334155;
+}
+.research-figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+.research-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 14px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+.research-figure figcaption {
+    color: var(--accent-color);
+    font-size: 0.92rem;
+    font-style: italic;
+    margin-top: 0.7rem;
+}
+.cite-box {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 5px;
+}
+@media (max-width: 900px) {
+    .pillar-grid, .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .research-hero {
+        padding: 1.35rem;
+    }
+}
+@media (max-width: 600px) {
+    .pillar-grid, .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
