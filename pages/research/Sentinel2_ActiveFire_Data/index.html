@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentinel-2 Active-Fire Benchmark Dataset | Mohammadreza Narimani</title>
-    <meta name="description" content="Open Sentinel-2 benchmark by Mohammadreza Narimani, Shreyan Mitra, and Parastoo Farajpoor: 2,148 chips from 25 California wildfires for deep-learning active-fire segmentation. Data in Brief 113357 (2026).">
-    <meta name="keywords" content="Mohammadreza Narimani, Sentinel-2, active fire, wildfire segmentation, deep learning, California wildfires, Data in Brief, UC Davis, SWIR, U-Net">
+    <meta name="description" content="Mohammadreza Narimani (UC Davis) releases a Sentinel-2 active-fire segmentation benchmark: 2,148 chips from 25 California wildfires, incident-disjoint splits, SWIR labels, analyst review, and ResNet-34 U-Net baseline. Data in Brief 113357 (2026)—cite the paper and Zenodo dataset.">
+    <meta name="keywords" content="Mohammadreza Narimani, Sentinel-2 active fire segmentation, California wildfire deep learning dataset, SWIR B12 B11 B8A fire detection, incident-disjoint train test split, rare-class segmentation U-Net, Data in Brief, Zenodo wildfire dataset, UC Davis">
     <meta name="author" content="Mohammadreza Narimani">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -145,11 +145,12 @@
                 </div>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-fire"></i> Why This Dataset</h2>
-                    <p>An active-fire mask locates ongoing combustion in a satellite scene. It is not a burn-scar map. Sentinel-2 shortwave infrared at 20 m can reveal those cores, but comparing segmentation models requires a shared rendering, a documented label rule, and a split that does not leak the same wildfire into training and test.</p>
-                    <p>This open <em>Data in Brief</em> article by <strong>Mohammadreza Narimani</strong> (corresponding author), Shreyan Mitra, and Parastoo Farajpoor releases a fixed archive of <strong>2,148 image–mask pairs</strong> from <strong>25 California wildfires</strong> (23 July 2020–21 August 2026). Images are 512 × 512 three-channel composites of Sentinel-2 Level-2A bands <strong>B12, B11, and B8A</strong> with a single linear rendering. Masks code background (0), SWIR-rule active fire (1), and invalid observations (255).</p>
+                    <h2 class="section-title"><i class="fas fa-fire"></i> Sentinel-2 Active-Fire Segmentation Benchmark for Deep Learning</h2>
+                    <p>An active-fire mask locates ongoing combustion in a satellite scene. It is not a burn-scar map and it is not a smoke product. Sentinel-2 shortwave infrared at 20 m can reveal flaming cores, but fair comparison of deep-learning segmentation models requires a shared rendering, a documented label rule, and a split that does not leak the same wildfire into both training and test.</p>
+                    <p>For researchers searching <strong>Sentinel-2 active fire dataset</strong>, <strong>California wildfire segmentation</strong>, <strong>SWIR deep learning fire detection</strong>, or <strong>incident-disjoint wildfire benchmark</strong>, this open <em>Data in Brief</em> article by corresponding author <strong>Mohammadreza Narimani</strong> (University of California, Davis), Shreyan Mitra, and Parastoo Farajpoor releases a fixed archive of <strong>2,148 image–mask pairs</strong> from <strong>25 California wildfires</strong> (23 July 2020–21 August 2026).</p>
+                    <p>Images are 512 × 512 three-channel composites of Sentinel-2 Level-2A bands <strong>B12, B11, and B8A</strong> with one linear rendering applied throughout. Masks code background (0), SWIR-rule active fire (1), and invalid observations (255). Fire labels occupy only <strong>0.0766%</strong> of all grid cells—so overall accuracy is a misleading headline metric compared with precision, recall, and IoU on rare positives.</p>
                     <div class="key-message">
-                        <strong>Core story:</strong> a rare-class, incident-disjoint Sentinel-2 benchmark so researchers can train and compare active-fire segmentation methods on wildfires held out from training—without re-querying Earth Search each time.
+                        <strong>Core story:</strong> a rare-class, incident-disjoint Sentinel-2 benchmark so methods can be trained and compared on wildfires held out from training—without re-querying Earth Search each time. Please cite the Data in Brief paper and Zenodo deposit when you use the archive.
                     </div>
                     <div class="stats-grid" aria-label="Dataset highlights">
                         <div class="stat-card"><span class="stat-value">2,148</span><span class="stat-label">Image–mask chips</span></div>
@@ -162,8 +163,8 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-layer-group"></i> Incident-Disjoint Splits</h2>
-                    <p>Partitions are assigned by wildfire name: <strong>18 / 3 / 4</strong> fires for train / validation / test (1,470 / 246 / 432 chips). Castle, McCash, and Bobcat are reserved for validation; Slater, Hopkins, CALDWELL, and Windy are reserved for testing. Every chip from a fire stays in one set, so grouped evaluation is possible on events the model has never seen.</p>
+                    <h2 class="section-title"><i class="fas fa-layer-group"></i> Incident-Disjoint Train, Validation, and Test Splits</h2>
+                    <p>Random chip splits can put pieces of the same wildfire into training and test, inflating scores through spatial leakage. This benchmark assigns partitions by wildfire name: <strong>18 / 3 / 4</strong> fires for train / validation / test (1,470 / 246 / 432 chips). Castle, McCash, and Bobcat are reserved for validation; Slater, Hopkins, CALDWELL, and Windy are reserved for testing. Every chip from a fire stays in one set, enabling grouped evaluation on events the model has never seen—the standard practitioners need for operational transfer.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_01.jpg"
                              alt="Mohammadreza Narimani Sentinel-2 active-fire dataset overview showing 2148 chips, incident-disjoint train validation test split, and rare-class fire pixel prevalence"
@@ -181,9 +182,9 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-satellite"></i> SWIR Labeling and Example Chips</h2>
-                    <p>Labels come from shortwave-infrared brightness and near-infrared contrast, then two steps of neighborhood growth. Hand-drawn regions of interest show why B11 and B12 separate active flame from vegetation, char, and bright smoke. True-color RGB often hides the same cores under smoke.</p>
-                    <p>Fire labels occupy only <strong>431,427</strong> grid cells. Median fire area on a positive chip is 79 pixels; most connected clusters are small hotspots. Accuracy is therefore a poor headline metric—precision, recall, and overlap on rare positives matter more.</p>
+                    <h2 class="section-title"><i class="fas fa-satellite"></i> SWIR Hotspot Labeling for Active Flame (Not Burn Scar)</h2>
+                    <p>Labels come from shortwave-infrared brightness and near-infrared contrast, then two steps of neighborhood growth—adapted from hotspot logic that exploits B12 emission near flaming combustion while B8A stays comparatively dark. Hand-drawn regions of interest illustrate why B11/B12 separate active flame from vegetation, char, and bright smoke. True-color RGB often hides the same cores under smoke plumes.</p>
+                    <p>Fire labels occupy only <strong>431,427</strong> grid cells across the archive. Median fire area on a positive chip is 79 pixels; most connected clusters are small hotspots rather than broad fronts. That rare-class geometry is why the paper and companion code emphasize fire-class IoU, precision, and recall—not overall pixel accuracy.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_03.jpg"
                              alt="Mohammadreza Narimani Sentinel-2 SWIR band contrast for active-fire labeling with box plots of B8A B11 B12 and a composite scene of flame, char, vegetation, and smoke"
@@ -208,9 +209,9 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-user-check"></i> Analyst Review and Reference Model</h2>
-                    <p>An analyst reviewed <strong>233 of 432 test chips</strong> without seeing the rule masks. Chip-level agreement was <strong>89.7%</strong> and rule-component confirmation was <strong>88.5%</strong>. Those annotations stay separate from the training labels so users can score agreement independently.</p>
-                    <p>The companion repository includes dataset construction code and a <strong>ResNet-34 U-Net</strong> reference run with validation-based threshold selection. Dataset version <strong>1.0.0</strong> is pinned on Zenodo; software is MIT-licensed on GitHub. Use those versions if you want comparisons tied to this paper.</p>
+                    <h2 class="section-title"><i class="fas fa-user-check"></i> Analyst Review, ResNet-34 U-Net Baseline, and How to Cite</h2>
+                    <p>An analyst reviewed <strong>233 of 432 test chips</strong> without seeing the rule masks. Chip-level agreement was <strong>89.7%</strong> and rule-component confirmation was <strong>88.5%</strong>. Those annotations remain separate from training labels so users can quantify weak-label agreement independently—an important honesty check for algorithmic SWIR labels.</p>
+                    <p>The companion GitHub repository provides dataset construction code and a <strong>ResNet-34 U-Net</strong> reference implementation with validation-based checkpoint and probability-threshold selection. Dataset version <strong>1.0.0</strong> is pinned on Zenodo (DOI 10.5281/zenodo.22713948); software is MIT-licensed. Use those pinned versions when you publish comparisons tied to this Data in Brief article by Mohammadreza Narimani and coauthors.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Sentinel2_ActiveFire_Data/Markdown/media/Mohammadreza_Narimani_Sentinel2_ActiveFire_Figure_06.jpg"
                              alt="Mohammadreza Narimani 40-epoch ResNet-34 U-Net reference run showing training and validation loss and validation fire-class IoU for Sentinel-2 active-fire segmentation"

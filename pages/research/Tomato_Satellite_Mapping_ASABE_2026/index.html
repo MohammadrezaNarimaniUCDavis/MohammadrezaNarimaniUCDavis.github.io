@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapping California Tomato Cropping Systems with AlphaEarth and Deep Learning | Mohammadreza Narimani</title>
-    <meta name="description" content="ASABE 2026 research by Mohammadreza Narimani, Alireza Pourreza, and Parastoo Farajpoor: field-scale processing tomato mapping in California using AlphaEarth geospatial embeddings, U-Net segmentation, and uncertainty estimation.">
-    <meta name="keywords" content="Mohammadreza Narimani, AlphaEarth, tomato crop mapping, geospatial embeddings, U-Net, deep learning, remote sensing, ASABE 2026, California agriculture, uncertainty quantification">
+    <meta name="description" content="Mohammadreza Narimani (UC Davis) maps California processing tomatoes with AlphaEarth geospatial embeddings, U-Net deep learning, and uncertainty estimation (F1 99.04%, IoU 98.11%). ASABE 2026 paper 2600545—read the research summary and cite the paper.">
+    <meta name="keywords" content="Mohammadreza Narimani, AlphaEarth tomato mapping California, processing tomato remote sensing, geospatial foundation model embeddings, U-Net crop segmentation, ASABE 2026, UC Davis Digital Agriculture">
     <meta name="author" content="Mohammadreza Narimani">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -281,6 +281,9 @@
 
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-map"></i> Why Statewide Tomato Mapping Matters</h2>
+                    <p>California processing tomatoes are a cornerstone specialty crop, yet statewide field inventories still struggle with cloudy seasons, phenology shifts, and the cost of wall-to-wall labeling. Geospatial foundation-model embeddings such as AlphaEarth compress multi-temporal satellite context into analysis-ready feature stacks that deep networks can segment at field scale.</p>
+                    <p>For searches on <strong>AlphaEarth tomato mapping</strong>, <strong>California processing tomato remote sensing</strong>, or <strong>U-Net crop segmentation uncertainty</strong>, this ASABE 2026 study by <strong>Mohammadreza Narimani</strong>, Alireza Pourreza, and Parastoo Farajpoor (UC Davis) reports spatially independent test performance of <strong>99.04% F1</strong> and <strong>98.11% IoU</strong> on 1,424 held-out fields, with Monte Carlo dropout uncertainty to flag ambiguous boundaries.</p>
+
                     <p>Reliable field-scale crop maps support acreage estimation, water accounting, yield forecasting, harvest logistics, contract planning, and agricultural policy. Many statewide products are retrospective, while conventional remote-sensing pipelines often depend on cloud masking, atmospheric correction, gap filling, hand-engineered vegetation indices, and case-specific temporal features.</p>
                     <p>We tested whether <strong>Google DeepMind's AlphaEarth Foundations</strong> could provide a more direct starting point. AlphaEarth represents every 10 m pixel with a 64-dimensional annual embedding learned from multi-source Earth observation data. Instead of interpreting individual bands as physical measurements, the downstream model uses the complete embedding as an analysis-ready description of land-surface behavior.</p>
                     <div class="key-message">

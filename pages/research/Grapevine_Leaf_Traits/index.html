@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Trait Spectral Modeling of Grapevine Leaves | Mohammadreza Narimani</title>
-    <meta name="description" content="CNN-LSTM multi-trait spectral modeling of grapevine leaf nutrients and biochemistry by Parastoo Farajpoor, Alireza Pourreza, Mohammadreza Narimani, Ashraf El-Kereamy, and Matthew W. Fidelibus. Plant Phenomics 100142 (2025).">
-    <meta name="keywords" content="Mohammadreza Narimani, grapevine, leaf traits, hyperspectral, CNN-LSTM, Plant Phenomics, PROSPECT-PRO, digital viticulture, UC Davis, nitrogen, phosphorus">
+    <meta name="description" content="Mohammadreza Narimani (UC Davis) coauthors multi-trait grapevine leaf hyperspectral modeling with CNN-LSTM and PROSPECT-PRO correction for nutrients and biochemistry. Plant Phenomics 100142 (2025)—read and cite the paper.">
+    <meta name="keywords" content="Mohammadreza Narimani, grapevine leaf hyperspectral nutrients, CNN-LSTM multi-trait spectral modeling, PROSPECT-PRO, Plant Phenomics, digital viticulture nitrogen, UC Davis">
     <meta name="author" content="Mohammadreza Narimani">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -142,6 +142,9 @@
 
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-leaf"></i> From Leaf Spectra to Vineyard Traits</h2>
+                    <p>Accurate, non-destructive estimation of grapevine leaf traits underpins precision viticulture—from nitrogen management to canopy biochemistry screening. Hyperspectral leaf reflectance can encode chlorophyll, water, and nutrient status, but single-trait models often ignore shared spectral structure across correlated biochemical targets.</p>
+                    <p>For searches on <strong>grapevine hyperspectral nutrients</strong>, <strong>CNN-LSTM leaf traits</strong>, <strong>PROSPECT-PRO correction</strong>, or <strong>Plant Phenomics grapevine</strong>, this page summarizes research coauthored by <strong>Mohammadreza Narimani</strong> at the University of California, Davis with Parastoo Farajpoor, Alireza Pourreza, Ashraf El-Kereamy, and Matthew W. Fidelibus. The multi-trait spectral framework couples deep sequence modeling with physically informed PROSPECT-PRO correction to improve nutrient and biochemical trait estimates from leaf spectra.</p>
+
                     <p>Hemispherical leaf reflectance encodes biochemistry and mineral nutrition. If those signals can be inverted reliably, growers gain a path to denser, less destructive vineyard monitoring. This <em>Plant Phenomics</em> study collects hyperspectral data from about <strong>1,000 grapevine leaves</strong> across three seasons (400–2500 nm) and compares single-trait versus multi-trait deep models.</p>
                     <p>Missing structural and pigment labels were imputed with <strong>PROSPECT-PRO</strong> in inverse mode, with a chlorophyll bias correction. Spectra were reduced from 2,101 bands to <strong>204</strong> correlated-band groups. Both model families use a hybrid <strong>CNN–LSTM</strong>; the multi-trait network predicts all 16 traits at once and weights measured versus imputed samples during training.</p>
                     <div class="key-message">
@@ -166,6 +169,8 @@
 
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-flask"></i> PROSPECT Correction and Multi-Trait Gains</h2>
+                    <p>Physically based models such as PROSPECT-PRO constrain how pigments, water, and dry matter shape leaf reflectance. Coupling that prior with a CNN-LSTM multi-trait learner helps reduce error propagation when several nutrients and biochemical traits are estimated together—exactly the setting of vineyard decision support where nitrogen, phosphorus, and related indicators co-vary.</p>
+                    <p>The figures that follow show experimental design, spectral behavior, and multi-trait performance. Please cite the <em>Plant Phenomics</em> article when you reuse methods or numbers; this research card is an SEO-friendly overview for Mohammadreza Narimani’s UC Davis digital viticulture collaborations, not a substitute for the paper.</p>
                     <p>Inverse PROSPECT-PRO chlorophyll was systematically high. A slope-based correction (scale 0.75 on the comparable subset) aligned distributions with wet-lab chlorophyll before those labels entered the trait models.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Grapevine_Leaf_Traits/Markdown/media/Mohammadreza_Narimani_Grapevine_Leaf_Traits_Figure_02.jpg"

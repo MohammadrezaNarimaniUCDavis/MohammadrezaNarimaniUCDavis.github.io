@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creek Fire Snow Persistence GeoAI | Mohammadreza Narimani</title>
-    <meta name="description" content="Open-access multisource GeoAI study by Parastoo Farajpoor and Mohammadreza Narimani on wildfire severity and snow persistence after the 2020 Creek Fire. Frontiers in Forests and Global Change 9:2016172 (2026). Read and cite the publisher version.">
-    <meta name="keywords" content="Mohammadreza Narimani, Creek Fire, snow persistence, GeoAI, wildfire severity, HLS, matched controls, spatial cross-validation, Frontiers in Forests and Global Change, UC Davis">
+    <meta name="description" content="Mohammadreza Narimani and Parastoo Farajpoor (UC Davis) explain Creek Fire snow persistence with matched BACI controls, HLS–MODIS validation, and spatially blocked XGBoost GeoAI. Frontiers in Forests and Global Change 9:2016172 (2026)—read and cite the open-access paper.">
+    <meta name="keywords" content="Mohammadreza Narimani, Creek Fire snow persistence, post-fire snowpack Sierra Nevada, wildfire severity dNBR, Harmonized Landsat Sentinel-2 HLS, matched before-after control-impact BACI, explainable GeoAI XGBoost SHAP, spatial cross-validation, Frontiers in Forests and Global Change, UC Davis Digital Agriculture">
     <meta name="author" content="Mohammadreza Narimani">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -136,11 +136,12 @@
                 </div>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-mountain"></i> Prediction Is Not the Same as a Fire Effect</h2>
-                    <p>Accurate mapping of post-fire snow conditions does not, by itself, prove that wildfire changed those conditions. Canopy loss, albedo change, terrain, and weather can push snow accumulation and melt in opposite directions within the same burned landscape.</p>
-                    <p>This original research by Parastoo Farajpoor and <strong>Mohammadreza Narimani</strong> (corresponding author) builds an explainable GeoAI framework for seasonal snow persistence after the <strong>2020 Creek Fire</strong> in California’s Sierra Nevada. Harmonized Landsat–Sentinel-2 (HLS) observations support eleven water years (2016–2026) on a 500 m grid, with matched before–after comparisons and spatially blocked machine learning.</p>
+                    <h2 class="section-title"><i class="fas fa-mountain"></i> Why Creek Fire Snow Persistence Matters</h2>
+                    <p>Mountain snow links forest condition to the timing and availability of water across the western United States. Warming is already changing snow amount, duration, and seasonality, while wildfire increasingly overlaps Sierra Nevada landscapes that historically retained snow through winter and spring. For hydrologists, forest managers, and remote-sensing researchers searching for <strong>Creek Fire snow persistence</strong>, <strong>post-fire snowpack</strong>, or <strong>wildfire severity and snow</strong>, the practical question is not only “can we map snow after fire?” but “did fire change snow relative to comparable unburned terrain?”</p>
+                    <p>Canopy removal can reduce interception and increase the fraction of snowfall reaching the ground, yet it also changes shading, longwave radiation, wind, and redistribution. Char on snow can lower albedo and accelerate melt. The same burned landscape can therefore show both greater accumulation and faster ablation. Satellite snow cover, snow disappearance date, snow depth, and snow water equivalent describe related but different quantities—so a high machine-learning score on one optical metric does not automatically prove a causal fire effect.</p>
+                    <p>This open-access Frontiers study by Parastoo Farajpoor and <strong>Mohammadreza Narimani</strong> (corresponding author, University of California, Davis) builds an explainable <strong>multisource GeoAI</strong> framework for seasonal snow persistence after the <strong>2020 Creek Fire</strong>. The analysis uses Harmonized Landsat–Sentinel-2 (HLS) observations for eleven water years (WY2016–WY2026) on a 500 m grid, matched before–after control–impact (BACI) comparisons, and spatially blocked machine learning with SHAP attribution.</p>
                     <div class="key-message">
-                        <strong>Core story:</strong> XGBoost predicts raw snow persistence well (R² = 0.811), but fire-adjusted anomalies are much harder (R² = 0.046). High predictive skill is not evidence of a disturbance effect—use the full paper when you cite this work.
+                        <strong>Core story:</strong> XGBoost predicts raw snow persistence well (R² = 0.811 under 5 km spatial CV), but fire-adjusted anomalies are much harder (R² = 0.046). High predictive skill is not evidence of a disturbance effect—please read and cite the publisher version when you reuse this framework.
                     </div>
                     <div class="stats-grid">
                         <div class="stat-card"><span class="stat-value">3,778</span><span class="stat-label">Matched burned cells</span></div>
@@ -155,81 +156,123 @@
                             <i class="fas fa-external-link-alt"></i> Prefer the publisher version for reading and citing
                         </a>
                     </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-diagram-project"></i> Multisource GeoAI Framework for Post-Fire Snow</h2>
+                    <p>The workflow separates four tasks that are often conflated in wildfire remote sensing: (1) constructing a seasonal optical snow-persistence metric from HLS; (2) classifying spectral burn severity with Sentinel-2 dNBR; (3) estimating fire-associated change with matched BACI contrasts; and (4) asking whether terrain, climate, and fire descriptors can predict raw persistence versus the fire-adjusted anomaly under spatial cross-validation.</p>
+                    <p>Seasonal persistence is defined as the fraction of clear-sky HLS observations classified as snow between 1 October and 30 July of each water year. Snow classification uses NDSI with green reflectance thresholds on Harmonized Landsat and Sentinel-2 collections. That metric tracks how often snow is optically detectable under clear skies—it is not snow water equivalent, and it is not the fraction of calendar days with snow.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_01.jpg"
-                             alt="Mohammadreza Narimani multisource GeoAI framework for Creek Fire snow persistence with matching, spatial machine learning, and attribution"
-                             title="Mohammadreza Narimani multisource GeoAI framework for Creek Fire snow persistence with matching, spatial machine learning, and attribution"
+                             alt="Mohammadreza Narimani UC Davis multisource GeoAI framework for Creek Fire snow persistence with matching spatial machine learning and SHAP attribution"
+                             title="Mohammadreza Narimani UC Davis multisource GeoAI framework for Creek Fire snow persistence with matching spatial machine learning and SHAP attribution"
                              loading="eager">
-                        <figcaption>Figure 1. Multisource GeoAI framework for post-fire snow persistence analysis.</figcaption>
-                    </figure>
-                    <figure class="research-figure">
-                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_02.jpg"
-                             alt="Mohammadreza Narimani Creek Fire 2020 study area map with fire perimeter and 5–30 km candidate-control annulus in the Sierra Nevada"
-                             title="Mohammadreza Narimani Creek Fire 2020 study area map with fire perimeter and 5–30 km candidate-control annulus in the Sierra Nevada"
-                             loading="lazy">
-                        <figcaption>Figure 2. Creek Fire study area and candidate-control region (5–30 km annulus).</figcaption>
-                    </figure>
-                    <figure class="research-figure">
-                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_03.jpg"
-                             alt="Mohammadreza Narimani Sentinel-2 true-color and shortwave-infrared views of the Creek Fire landscape before, during, and after the 2020 fire"
-                             title="Mohammadreza Narimani Sentinel-2 true-color and shortwave-infrared views of the Creek Fire landscape before, during, and after the 2020 fire"
-                             loading="lazy">
-                        <figcaption>Figure 3. Sentinel-2 true-color and shortwave-infrared context for the Creek Fire landscape.</figcaption>
+                        <figcaption>Figure 1. Multisource GeoAI framework: satellite snow metrics, matching, spatially evaluated learning, and attribution.</figcaption>
                     </figure>
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-snowflake"></i> Terrain, Severity, and Observed Persistence</h2>
-                    <p>Eligible snow-zone cells inside the perimeter were matched to unburned controls on terrain and pre-fire snow; absolute standardized mean differences after matching were ≤ <strong>0.047</strong>. HLS seasonal persistence agreed closely with MODIS (mean annual spatial correlation <strong>0.947</strong>).</p>
+                    <h2 class="section-title"><i class="fas fa-map-location-dot"></i> Creek Fire Study Area and Candidate Controls</h2>
+                    <p>The 2020 Creek Fire burned roughly <strong>1,544 km²</strong> in California’s central Sierra Nevada, overlapping montane forests with substantial pre-existing drought- and bark-beetle-associated tree mortality. Five pre-fire and six post-fire snow seasons allow the post-fire record to be interpreted against both local baselines and contemporaneous unburned controls.</p>
+                    <p>Candidate controls were drawn from a 5–30 km annulus beyond the perimeter: the inner buffer reduces boundary mixing, while the outer limit keeps a regional comparison pool. Geographic proximity alone was not treated as evidence of comparability. Matching used terrain and pre-fire snow conditions so that treatment and control cells start from similar physical settings before the fire year.</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_02.jpg"
+                             alt="Mohammadreza Narimani Creek Fire 2020 Sierra Nevada study area map with fire perimeter and 5 to 30 km candidate-control annulus for matched BACI analysis"
+                             title="Mohammadreza Narimani Creek Fire 2020 Sierra Nevada study area map with fire perimeter and 5 to 30 km candidate-control annulus for matched BACI analysis"
+                             loading="lazy">
+                        <figcaption>Figure 2. Creek Fire perimeter and candidate-control annulus used for matched comparisons.</figcaption>
+                    </figure>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_03.jpg"
+                             alt="Mohammadreza Narimani Sentinel-2 true-color and shortwave-infrared chronology of the Creek Fire landscape before during and after September 2020"
+                             title="Mohammadreza Narimani Sentinel-2 true-color and shortwave-infrared chronology of the Creek Fire landscape before during and after September 2020"
+                             loading="lazy">
+                        <figcaption>Figure 3. Sentinel-2 true-color and SWIR context before, during, and after the Creek Fire.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-snowflake"></i> Terrain, Burn Severity, and Observed Snow Persistence</h2>
+                    <p>Eligible snow-zone cells required mean pre-fire persistence greater than 0.05, yielding <strong>3,778</strong> perimeter-internal treatment cells matched to unburned controls. Absolute standardized mean differences after matching were no greater than <strong>0.047</strong>, indicating strong covariate balance on the matching variables.</p>
+                    <p>Elevation, slope, northness, and Sentinel-2 dNBR classes structure the burned landscape. Raw post-minus-pre persistence maps show where optical snow detection changed, but those raw maps are not control-adjusted: both burned and unburned cells can move together when climate varies from year to year. That is why the BACI design is central to claims about fire-associated change.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_04.jpg"
-                             alt="Mohammadreza Narimani Creek Fire maps of elevation, slope, northness, dNBR classes, pre-fire HLS snow persistence, and raw persistence change"
-                             title="Mohammadreza Narimani Creek Fire maps of elevation, slope, northness, dNBR classes, pre-fire HLS snow persistence, and raw persistence change"
+                             alt="Mohammadreza Narimani Creek Fire maps of elevation slope northness dNBR burn severity classes pre-fire HLS snow persistence and raw persistence change"
+                             title="Mohammadreza Narimani Creek Fire maps of elevation slope northness dNBR burn severity classes pre-fire HLS snow persistence and raw persistence change"
                              loading="lazy">
                         <figcaption>Figure 4. Terrain, spectral disturbance, and observed snow-persistence fields.</figcaption>
                     </figure>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_05.jpg"
-                             alt="Mohammadreza Narimani spatial correspondence map combining Creek Fire burn-severity classes with raw HLS snow-persistence change"
-                             title="Mohammadreza Narimani spatial correspondence map combining Creek Fire burn-severity classes with raw HLS snow-persistence change"
+                             alt="Mohammadreza Narimani spatial map linking Creek Fire dNBR burn-severity classes with raw HLS snow-persistence change inside the perimeter"
+                             title="Mohammadreza Narimani spatial map linking Creek Fire dNBR burn-severity classes with raw HLS snow-persistence change inside the perimeter"
                              loading="lazy">
-                        <figcaption>Figure 5. Spatial correspondence between spectral burn severity and raw persistence change.</figcaption>
-                    </figure>
-                    <figure class="research-figure">
-                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_06.jpg"
-                             alt="Mohammadreza Narimani raincloud plots of matched treatment-control snow-persistence differences by dNBR class before and after the Creek Fire"
-                             title="Mohammadreza Narimani raincloud plots of matched treatment-control snow-persistence differences by dNBR class before and after the Creek Fire"
-                             loading="lazy">
-                        <figcaption>Figure 6. Matched treatment–control differences before and after the Creek Fire by severity class.</figcaption>
+                        <figcaption>Figure 5. Descriptive spatial correspondence between severity class and raw persistence change.</figcaption>
                     </figure>
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-brain"></i> Matched Contrast vs Predictive Skill</h2>
-                    <p>The landscape-average before–after control–impact contrast was <strong>+0.0017</strong> (year-level 95% CI −0.023 to +0.027). The highest burn-severity class showed a stronger response of <strong>+0.026</strong> (2.6 percentage points). Under 5 km spatial cross-validation, XGBoost reached out-of-fold <strong>R² = 0.811</strong> for raw post-fire persistence but only <strong>0.046</strong> for the fire-adjusted anomaly. Elevation and temperature together accounted for <strong>65.7%</strong> of mean absolute model attribution.</p>
+                    <h2 class="section-title"><i class="fas fa-scale-balanced"></i> Matched BACI Contrasts by Wildfire Severity</h2>
+                    <p>Across all matched cells, the landscape-average BACI contrast was only <strong>+0.0017</strong>, with a year-level 95% confidence interval from <strong>−0.023 to +0.027</strong> (p = 0.88). Both treatment and matched-control cells increased in mean persistence after the fire; their similar movement is why the adjusted contrast is much smaller than a naive before–after difference inside the perimeter.</p>
+                    <p>A clearer signal appears in the highest dNBR class (≥0.44; n = 448): the BACI contrast was <strong>+0.026</strong> (2.6 percentage points), with a year-level interval of +0.002 to +0.050 and about 66% positive cell-level contrasts. Moderate severity showed a smaller positive contrast (+0.007); low-severity and internal low-change classes were not distinguishable from zero at the year level. Severity therefore identifies a class-level optical snow response more clearly than a strong, uniformly graded cell-level relationship (Spearman ρ between continuous dNBR and cell BACI ≈ 0.11).</p>
+                    <figure class="research-figure">
+                        <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_06.jpg"
+                             alt="Mohammadreza Narimani raincloud plots of matched BACI treatment-control snow-persistence differences by Creek Fire dNBR severity class"
+                             title="Mohammadreza Narimani raincloud plots of matched BACI treatment-control snow-persistence differences by Creek Fire dNBR severity class"
+                             loading="lazy">
+                        <figcaption>Figure 6. Matched treatment–control differences before and after fire by severity class.</figcaption>
+                    </figure>
+                    <div class="key-message">
+                        <strong>Interpretation tip:</strong> a severity-associated increase in optically detected snow persistence is not the same as a landscape-average snow-water increase. Cite the Frontiers methods when reporting either result.
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-satellite"></i> HLS–MODIS Consistency for Seasonal Snow Monitoring</h2>
+                    <p>Annual spatial agreement between HLS and MODIS persistence was high throughout the eleven-season record (mean Pearson <strong>r = 0.947</strong>; range 0.912–0.970). Both products captured the same prominent annual contrasts, including the low-persistence WY2018 season and the high-persistence WY2023 season. HLS domain means were often slightly higher than MODIS, but the shared pattern supports using HLS as a consistent optical snow indicator for this GeoAI study.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_07.jpg"
-                             alt="Mohammadreza Narimani HLS versus MODIS consistency plots for Creek Fire seasonal snow persistence across eleven water years"
-                             title="Mohammadreza Narimani HLS versus MODIS consistency plots for Creek Fire seasonal snow persistence across eleven water years"
+                             alt="Mohammadreza Narimani HLS versus MODIS consistency for Creek Fire seasonal snow persistence across eleven water years"
+                             title="Mohammadreza Narimani HLS versus MODIS consistency for Creek Fire seasonal snow persistence across eleven water years"
                              loading="lazy">
-                        <figcaption>Figure 7. HLS–MODIS consistency across the eleven-season record.</figcaption>
+                        <figcaption>Figure 7. HLS–MODIS spatial and annual consistency across WY2016–WY2026.</figcaption>
                     </figure>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-brain"></i> Spatial Cross-Validation Separates Mapping from Fire Inference</h2>
+                    <p>Under <strong>5 km spatial-block cross-validation</strong>, XGBoost predicted raw post-fire persistence with out-of-fold <strong>R² = 0.811</strong>. The same model family applied to the fire-adjusted anomaly reached only <strong>R² = 0.046</strong>. In other words, environmental-state prediction can look excellent while disturbance-response prediction remains weak—exactly the distinction researchers need when searching for “explainable GeoAI wildfire snow” or “spatial cross-validation post-fire hydrology.”</p>
+                    <p>SHAP attribution for the raw-persistence model shows that <strong>elevation and temperature together account for 65.7%</strong> of mean absolute attribution. Terrain and climate dominate; fire descriptors contribute far less once the target is the matched anomaly. That pattern warns against treating a high R² snow map as evidence that fire “explains” snow change.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_08.jpg"
-                             alt="Mohammadreza Narimani spatially evaluated machine-learning performance for Creek Fire raw snow persistence versus fire-adjusted anomaly"
-                             title="Mohammadreza Narimani spatially evaluated machine-learning performance for Creek Fire raw snow persistence versus fire-adjusted anomaly"
+                             alt="Mohammadreza Narimani spatially evaluated XGBoost performance for Creek Fire raw snow persistence versus fire-adjusted anomaly"
+                             title="Mohammadreza Narimani spatially evaluated XGBoost performance for Creek Fire raw snow persistence versus fire-adjusted anomaly"
                              loading="lazy">
                         <figcaption>Figure 8. Spatially evaluated prediction of raw persistence versus the fire-adjusted anomaly.</figcaption>
                     </figure>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Creek_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Creek_Wildfire_Figure_09.jpg"
-                             alt="Mohammadreza Narimani SHAP attribution for Creek Fire XGBoost snow-persistence model showing terrain and climate dominance over fire descriptors"
-                             title="Mohammadreza Narimani SHAP attribution for Creek Fire XGBoost snow-persistence model showing terrain and climate dominance over fire descriptors"
+                             alt="Mohammadreza Narimani SHAP attribution for Creek Fire XGBoost snow-persistence model showing elevation and temperature dominance"
+                             title="Mohammadreza Narimani SHAP attribution for Creek Fire XGBoost snow-persistence model showing elevation and temperature dominance"
                              loading="lazy">
-                        <figcaption>Figure 9. SHAP attribution for the XGBoost raw-persistence model.</figcaption>
+                        <figcaption>Figure 9. SHAP attribution: terrain–climate dominance for raw persistence prediction.</figcaption>
                     </figure>
+                    <div class="pillar-grid">
+                        <div class="pillar-card">
+                            <h3>What the page summarizes</h3>
+                            <p>Design, key numbers, and figures for Creek Fire snow persistence GeoAI by Mohammadreza Narimani and Parastoo Farajpoor at UC Davis.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>What to cite</h3>
+                            <p>The Frontiers in Forests and Global Change article (DOI 10.3389/ffgc.2026.2016172)—not this research card alone.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Who it helps</h3>
+                            <p>Researchers and managers searching for post-fire snow monitoring, matched BACI designs, and honest spatial ML evaluation.</p>
+                        </div>
+                    </div>
                     <div class="key-message">
-                        <strong>Takeaway:</strong> severity-associated optical snow response can coexist with terrain–climate dominance in predictive skill. Cite the Frontiers article—not only this summary—when you reuse the framework.
+                        <strong>Takeaway:</strong> severity-associated optical snow response can coexist with terrain–climate dominance in predictive skill. Combining multisource remote sensing, matched inference, and spatially evaluated GeoAI keeps mapping accuracy separate from disturbance claims.
                     </div>
                 </section>
 

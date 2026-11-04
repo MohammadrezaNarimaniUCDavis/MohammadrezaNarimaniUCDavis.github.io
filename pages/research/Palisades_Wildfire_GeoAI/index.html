@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explainable GeoAI for the 2025 Palisades Fire | Mohammadreza Narimani</title>
-    <meta name="description" content="Explainable GeoAI by Parastoo Farajpoor and Mohammadreza Narimani on vegetation and built environment in the 2025 Palisades Fire. Spatial validation drops ROC-AUC from 0.92 to 0.75. Frontiers in Sustainability 7:1975724 (2026).">
-    <meta name="keywords" content="Mohammadreza Narimani, Palisades Fire, GeoAI, urban wildfire, structure loss, spatial cross-validation, NDMI, building density, Frontiers in Sustainability, UC Davis">
+    <meta name="description" content="Mohammadreza Narimani and Parastoo Farajpoor (UC Davis) use explainable GeoAI on the 2025 Palisades Fire: 12,081 CAL FIRE inspections, building density, NDMI, and spatial cross-validation (ROC-AUC 0.92→0.75). Frontiers in Sustainability 7:1975724—read and cite the paper.">
+    <meta name="keywords" content="Mohammadreza Narimani, Palisades Fire 2025 structure loss, urban wildfire GeoAI, spatial cross-validation wildfire, building density neighborhood risk, NDMI vegetation moisture, CAL FIRE DINS, explainable AI SHAP wildfire, Frontiers in Sustainability, UC Davis">
     <meta name="author" content="Mohammadreza Narimani">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -139,11 +139,12 @@
                 </div>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-house-fire"></i> Urban Wildfire as a Systems Problem</h2>
-                    <p>Wind-driven fires that enter dense neighborhoods are not simply larger wildfires. Once buildings ignite, structures become fuel and fire can travel through the built fabric after the wildland flame front has passed. City-scale tools often look skillful until they are tested in spatially separated settings.</p>
-                    <p>This original research by Parastoo Farajpoor and <strong>Mohammadreza Narimani</strong> (corresponding author) builds a spatially validated GeoAI workflow for the <strong>January 2025 Palisades Fire</strong>. It links <strong>12,081 CAL FIRE damage inspections</strong> to pre-fire Sentinel-2 vegetation amount and moisture, Landsat surface temperature, LANDFIRE fuels, 10 m terrain, and a dated OpenStreetMap layer of buildings and roads.</p>
+                    <h2 class="section-title"><i class="fas fa-house-fire"></i> Urban Wildfire Structure Loss and Explainable GeoAI</h2>
+                    <p>Wind-driven fires that enter dense neighborhoods are not simply larger wildfires. Once buildings ignite, structures become fuel and fire can travel through the built fabric after the wildland flame front has passed. City-scale risk tools often look skillful under random train–test splits until they are evaluated in spatially separated blocks—exactly when planners need honest uncertainty.</p>
+                    <p>For searches on <strong>Palisades Fire structure loss</strong>, <strong>urban wildfire GeoAI</strong>, <strong>building density wildfire risk</strong>, or <strong>spatial cross-validation wildfire</strong>, this page summarizes open-access research by Parastoo Farajpoor and corresponding author <strong>Mohammadreza Narimani</strong> (University of California, Davis). The January 2025 Palisades Fire analysis links <strong>12,081 CAL FIRE Damage Inspection (DINS)</strong> records to pre-fire Sentinel-2 vegetation amount and moisture (NDVI/NDMI), Landsat land-surface temperature, LANDFIRE fuels, 10 m terrain, and a dated OpenStreetMap building/road layer.</p>
+                    <p>Within inspected residential structures, <strong>5,566 of 9,883</strong> were destroyed. The modeling goal is neighborhood-scale screening—not parcel-level prediction. Logistic regression and gradient boosting are tuned under nested procedures and compared with both random and <strong>1 km spatial-block</strong> cross-validation so that reported skill reflects geographic generalization.</p>
                     <div class="key-message">
-                        <strong>Core story:</strong> neighborhood building count and vegetation moisture help screen urban structure loss—but random cross-validation overstates skill. Spatial blocking is required before maps are used for planning.
+                        <strong>Core story:</strong> neighborhood building count and vegetation moisture help screen urban structure loss—but random CV overstates skill (ROC-AUC 0.92 → 0.75 under spatial blocking). Cite the Frontiers paper when you use these findings.
                     </div>
                     <div class="stats-grid">
                         <div class="stat-card"><span class="stat-value">12,081</span><span class="stat-label">CAL FIRE inspections</span></div>
@@ -184,9 +185,10 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-city"></i> Built Form and Vegetation Moisture</h2>
-                    <p>Residential destruction was modeled with logistic regression and gradient boosting under nested tuning, using both random and <strong>1 km spatial-block</strong> cross-validation. Within inspected residential structures, <strong>neighborhood building count</strong> was the strongest predictor: conditional destruction odds rose <strong>3.74-fold per standard deviation</strong> in building count inside a 100 m-radius disk.</p>
-                    <p>Higher neighborhood <strong>NDMI</strong> (moisture) was associated with lower destruction odds. NDVI’s sign flipped depending on whether it was entered jointly or alone, so greenness-only maps can mislead. Neighborhood-scale features generally outperformed immediate-surrounding sets, with overlapping fold-level variability.</p>
+                    <h2 class="section-title"><i class="fas fa-city"></i> Building Density, NDMI Moisture, and Neighborhood Screening</h2>
+                    <p>Within inspected residential structures, <strong>neighborhood building count</strong> inside a 100 m-radius disk was the strongest predictor: conditional destruction odds rose <strong>3.74-fold per standard deviation</strong>. That finding speaks directly to urban form—density and spacing—not only to wildland fuel maps.</p>
+                    <p>Higher neighborhood <strong>NDMI</strong> (vegetation moisture) was associated with lower destruction odds. NDVI’s sign flipped depending on whether it was entered jointly or alone, so greenness-only risk maps can mislead. Neighborhood-scale features generally outperformed immediate-surrounding sets, though fold-level variability overlapped. SHAP rankings for XGBoost and odds ratios for logistic models provide complementary, interpretable summaries for GeoAI users who need transparent drivers.</p>
+                    <p>Pre-fire predictor distributions by original DINS damage class (NDVI, NDMI, fuels, slope, spacing, building count, year built, wildland distance) show why multi-factor screening is necessary: no single satellite index separates destroyed from surviving homes cleanly across the Palisades footprint.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Palisades_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Palisades_Wildfire_Figure_05.jpg"
                              alt="Mohammadreza Narimani Palisades GeoAI SHAP ranking, building-count dependence, logistic odds ratios, and NDMI SHAP dependence for structure destruction"
@@ -211,8 +213,10 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-chart-area"></i> Spatial Validation Changes the Story</h2>
-                    <p>Random CV suggested excellent discrimination for the integrated gradient-boosting model (<strong>ROC-AUC 0.92</strong>). Spatial validation reduced that to <strong>0.75</strong>. An interpretable logistic model reached a similar spatial AUC and had a calibration slope closer to one. The paper therefore treats the workflow as a <strong>neighborhood-scale screening tool</strong>, not a parcel-level prediction system.</p>
+                    <h2 class="section-title"><i class="fas fa-chart-area"></i> Spatial Cross-Validation Changes Reported Wildfire Skill</h2>
+                    <p>Random CV suggested excellent discrimination for the integrated gradient-boosting model (<strong>ROC-AUC 0.92</strong>). Spatial-block validation reduced that to <strong>0.75</strong>. An interpretable logistic model reached a similar spatial AUC and had a calibration slope closer to one. Sensitivity checks on neighborhood support radius and block width further show that headline metrics move when spatial dependence is respected.</p>
+                    <p>Post-fire dNBR and relative greenness versus 2022–2024 month-matched references provide spectral impact context but are not used as predictors of destruction. Tract-level residential destruction compared with CDC/ATSDR Social Vulnerability Index (SVI) 2022 adds community context for equity-aware interpretation—without claiming that SVI alone predicts parcel outcomes.</p>
+                    <p>The paper therefore treats the workflow as a <strong>neighborhood-scale screening tool</strong> for urban wildfire structure loss, not a parcel-level prediction system. Applying coefficients to another fire still requires independent-event validation.</p>
                     <figure class="research-figure">
                         <img src="../../../assets/Research/Palisades_Wildfire_GeoAI/Markdown/media/Mohammadreza_Narimani_Palisades_Wildfire_Figure_08.jpg"
                              alt="Mohammadreza Narimani Palisades GeoAI spatial cross-validation folds, out-of-fold destruction probability map, ROC-AUC comparison of logistic and XGBoost, and calibration curves"
